@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\
+	Item
+\* ------------------------------------------------------------ */
+
+.item {
+	padding: 227px 0 59px;
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint-down(tablet) {
+		flex-wrap: wrap;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 60px 0;
+	}
+
+	.item__title {
+		margin-bottom: 24px;
+		font-weight: 200;
+		color: $c-gray;
+		line-height: 0.81;
+	}
+
+	.item__content {
+		width: 52%;
+		padding-top: 46px;
+		padding-left: 4px;
+		color: $c-gray;
+		line-height: 1.94;
+
+		@include breakpoint-down(large-desktop) {
+			padding-left: 20px;
+		}
+
+		@include breakpoint-down(tablet) {
+			width: 100%;
+		}
+	}
+
+	.item__image {
+		margin-left: -150px;
+
+		@include breakpoint-down(large-desktop) {
+			margin-left: -120px;
+		}
+
+		@include breakpoint-down(tablet) {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}

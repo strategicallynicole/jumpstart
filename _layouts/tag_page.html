@@ -1,0 +1,21 @@
+---
+title: Tag Page
+layout: default.njk
+---
+
+{% include tag_header.html %}
+<div class="blog-area section-spacing  bg-color1">
+<div class="blog-wrapper">
+    <div class="container">
+        <div class="row">
+            {% for posts in site.posts limit:'40' %}
+            {% if posts.tags contains page.tag %}
+            <div class="col-md-6 col-lg-4">
+                {% include blog_posts.html %}
+            </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>

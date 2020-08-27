@@ -1,0 +1,30 @@
+{% from "partials/card.njk" import card %}
+ 
+  <div class="featured-slider-area">
+        <div class="featured-slider owl-carousel">
+                            {% for post in posts.slice(0,3) %}
+            <div class="single-slide" style="background-image: url({{ post.feature_image }}); background-color: rgba(0,0,0,.6);">
+                <!-- Single Slide -->
+
+                <div class="single-slide-content">
+                    <div class="post-meta">
+                        
+                        <p>           <i class="fad fa-tags"></i>	&nbsp;     {% if post.tags %}{% for tag in post.tags %}<a href="{{ tag.url }}">{{ tag.name }}</a> {% endfor %}{% endif %}
+</p>
+                        <p>{{ post.date  }}</p>
+                    </div>
+                    <div class="author-meta">
+<i class="fad fa-clock"></i>   {{ post.html | safe | getReadingTime }} min read
+                    </div>
+                    <h2>{{  post.title  }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                            <a class="neubutton" href="{{ post.url }}">Read On</a>
+                </div>
+            </div>
+ {% endfor %}
+           
+        </div> 
+    </div>
+    <!-- ================== /Featured Post Area ======================= -->
+ 
+ 

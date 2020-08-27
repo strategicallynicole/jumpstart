@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	Checkbox Alt
+\* ------------------------------------------------------------ */
+
+.checkbox-alt {
+	input {
+		position: absolute;
+		opacity: 0;
+	}
+
+	label {
+		position: relative;
+		height: 34px;
+		width: 58px;
+		display: block;
+		border-radius: 20px;
+		border: 1px solid #262B31;
+		background: #131416;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: #6C5BA7;
+			box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.75);
+			transition: left .3s, background .3s;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: -20px;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: linear-gradient(135.04deg, #47484A 14.18%, #2A2A2C 33.59%, #000000 57.91%);
+			box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+			transition: background .3s;
+		}
+	}
+
+	input:checked + label {
+		&:before {
+			background: #272B30;
+			left: 26px;
+		}
+
+		&:after {
+			background: #6C5BA7;
+			box-shadow: none;
+		}
+	}
+}

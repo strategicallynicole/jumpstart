@@ -1,0 +1,318 @@
+---
+permalink: "/blog/"
+layout: default.njk
+bodyclass: blog blog-scheme-dark
+headerclass: main-header main-header-overlay
+mainclass: content bg-vulcan py-0"
+cssfile: "/themes/original.css"
+fontawesome: true
+home: false
+---
+
+{%- assign _page_articles_data_source = page.articles.data_source | default: layout.articles.data_source -%}
+
+{%- if _page_articles_data_source -%}
+{%- assign _keys = _page_articles_data_source | split: '.' -%}
+{%- endif -%}
+
+{%- assign _articles = nil -%}
+{%- for _key in _keys -%}
+  {%- if forloop.first -%}
+    {%- case _key -%}
+      {%- when 'site' -%}
+        {%- assign _articles = site -%}
+      {%- when 'page' -%}
+        {%- assign _articles = page -%}
+      {%- when 'layout' -%}
+        {%- assign _articles = layout -%}
+      {%- when 'paginator' -%}
+        {%- assign _articles = paginator -%}
+      {%- else -%}
+        {%- assign _articles = site[_key] -%}
+      {%- else -%}
+    {%- endcase -%}
+  {%- else -%}
+    {%- assign _articles = _articles[_key] -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign _type = page.articles.type | default: layout.articles.type -%}
+
+{%- if _articles -%}
+<div class="layout--articles">
+
+    {%- if _type == 'grid' -%}
+      {%- if page.articles.size == 'sm' -%}
+        {%- include article-list.html articles=_articles type='grid' size='sm' -%}
+      {%- else -%}
+        {%- include article-list.html articles=_articles type='grid' -%}
+      {%- endif -%}
+
+    {%- elsif _type == 'brief' -%}
+      {%- include snippets/assign.html
+        target=site.data.variables.default.page.articles.show_info
+        source0=layout.articles.show_info source1=page.articles.show_info -%}
+      {%- assign _show_info = __return -%}
+
+      {%- include article-list.html articles=_articles type='brief' show_info=_show_info -%}
+
+    {%- else -%}
+      {%- include snippets/assign.html
+        target=site.data.variables.default.page.articles.show_cover
+        source0=layout.articles.show_cover source1=page.articles.show_cover -%}
+      {%- assign _show_cover = __return -%}
+
+      {%- include snippets/assign.html
+        target=site.data.variables.default.page.articles.show_excerpt
+        source0=layout.articles.show_excerpt source1=page.articles.show_excerpt -%}
+      {%- assign _show_excerpt = __return -%}
+
+      {%- include snippets/assign.html
+        target=site.data.variables.default.page.articles.show_readmore
+        source0=layout.articles.show_readmore source1=page.articles.show_readmore -%}
+      {%- assign _show_readmore = __return -%}
+
+      {%- include snippets/assign.html
+        target=site.data.variables.default.page.articles.show_info
+        source0=layout.articles.show_info source1=page.articles.show_info -%}
+      {%- assign _show_info = __return -%}
+
+      {%- assign _article_type = page.articles.article_type | default: layout.articles.article_type -%}
+      {%- assign _cover_size = page.articles.cover_size | default: layout.articles.cover_size -%}
+      {%- assign _excerpt_type = page.articles.excerpt_type | default: layout.articles.excerpt_type -%}
+
+      {%- include article-list.html articles=_articles type='item'
+        article_type=_article_type
+        show_cover=_show_cover cover_size=_cover_size
+        show_excerpt=_show_excerpt excerpt_type=_excerpt_type
+        show_readmore=_show_readmore show_info=_show_info -%}
+
+    {%- endif -%}
+
+  </div>
+{%- endif -%}
+
+{{ content }}
+<header class="{{layout.headerclass}}" data-react-to-megamenu="true" data-sticky-header="true" data-sticky-options='{ "stickyTrigger": "first-section" }'>
+    {% include header.html %}
+
+        <main id="content" class="content ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="liquid-blog-posts">
+                            <div class="liquid-blog-grid liquid-blog-style-classic row">
+                                <div class="col-md-12" data-pgc-define="postccard" data-pgc-define-name="postcard for feed">
+                                    <article class="liquid-lp liquid-blog-item liquid-blog-item-grid liquid-blog-scheme-dark mb-50">
+                                        <figure class="liquid-lp-media">
+                                            <a href="#"> <img src="./assets/demo/blog/blog-1.jpg" alt="Lates Post"> </a>
+                                        </figure>
+                                        <div class="liquid-blog-item-inner">
+                                            <a href="#" class="liquid-overlay-link">Business meeting 2017 in San Francisco</a>
+                                            <header class="liquid-lp-header">
+                                                <h2 class="liquid-lp-title font-weight-bold h3 size-sm"> <a href="#" data-split-text="text" data-split-options='{ "type": "lines" }'>Business meeting 2017 in San Francisco</a> </h2>
+                                                <div class="liquid-lp-details">
+                                                    <time class="liquid-lp-date" datetime="2017-09-25">5 hours ago</time>
+                                                    in
+                                                    <ul class="liquid-lp-category">
+                                                        <li>
+                                                            <a href="#">Business</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.liquid-lp-details -->
+                                            </header>
+                                            <div class="liquid-lp-excerpt">
+                                                <p>One of my favourite things I like to watch is the bloopers and outtakes that are shown of mistakes made during the making of a movie.</p>
+                                            </div>
+                                            <!-- /.latest-post-excerptc -->
+                                            <footer class="liquid-lp-footer">
+                                                <a href="#" class="btn btn-naked text-uppercase ltr-sp-1 size-sm font-weight-bold liquid-lp-read-more"> <span> <span class="btn-line btn-line-before"></span> <span class="btn-txt">Continue Reading</span> <span class="btn-line btn-line-after"></span> </span> </a>
+                                            </footer>
+                                        </div>
+                                        <!-- /.liquid-blog-item-inner -->
+                                    </article>
+                                </div>
+                                <!-- /.col-md-12 -->
+                                <!-- /.col-md-12 -->
+                                <!-- /.col-md-12 -->
+                                <!-- /.col-md-12 -->
+                                <!-- /.col-md-12 -->
+                            </div>
+                            <!-- /.liquid-blog-grid liquid-blog-style-classic row -->
+                        </div>
+                        <!-- /.liquid-blog-posts -->
+                    </div>
+                    <!-- /.col-md-8 -->
+                    <div class="col-md-3 col-md-offset-1 sidebar-container" data-pgc-define="sidebar" data-pgc-define-name="Sidebar">
+                        <aside class="main-sidebar">
+                            <div class="widget widget_search">
+                                <form role="search" method="get" class="search-form" action="#">
+                                    <label>
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                                    </label>
+                                    <input type="submit" class="search-submit" value="Search">
+                                </form>
+                            </div>
+                            <!-- /.widget_search -->
+                            <div class="widget widget_categories">
+                                <h3 class="widget-title">Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Beauty</a> (2) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Business</a> (2) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Carousel</a> (4) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Classic</a> (5) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Featured</a> (1) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Food &amp; Drink</a> (1)
+                                    </li>
+                                    <li>
+                                        <a href="#">Grid</a> (12) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Main New</a> (3) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Masonry</a> (16) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Masonry Alt</a> (10)
+                                    </li>
+                                    <li>
+                                        <a href="#">Motivation</a> (2) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Split</a> (5) 
+                                    </li>
+                                    <li>
+                                        <a href="#">Travel</a> (2) 
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.widget_categories -->
+                            <div class="widget widget_media_image">
+                                <a href="#">  </a>
+                            </div>
+                            <!-- /.widget_media_image -->
+                        </aside>
+                    </div>
+                    <!-- /.col-md-3 col-md-offset-1 sidebar-container -->
+                </div>
+                <!-- /.row -->
+            </div>
+
+
+           
+            <div class="blog-single-cover scheme-light" data-fullheight="true" data-inview="true" data-inview-options='{ "onImagesLoaded": true }' style="background-color: #666871;">
+                <figure class="blog-single-media" data-responsive-bg="true" data-parallax="true" data-parallax-options='{ "parallaxBG": true, "triggerHook": "onLeave" }' data-parallax-from='{ "translateY": "0%" }' data-parallax-to='{ "translateY": "20%" }'>
+                    <img src="ave-html/assets/demo/blog/blog-single-1.jpg" alt="Blog single">
+                </figure>
+                <div class="blog-single-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <header class="entry-header blog-single-header" data-parallax="true" data-parallax-to='{ "opacity": 0, "translateY": "30%" }' data-parallax-options='{ "triggerHook": "0.3" }'>
+                                    <h1 class="blog-single-title entry-title h2" data-split-text="true" data-split-options='{ "type": "lines" }'>The small change that creates massive results in your life</h1>
+                                    <div class="post-meta">
+                                        <span class="byline"> <span class="block text-uppercase ltr-sp-1">READING TIME:</span> <span class="author vcard"> <a class="url fn n" href="ave-html/blog-single.html#">David Beckham</a> </span> </span>
+                                        <span class="posted-on"> <span class="block text-uppercase ltr-sp-1">Published on:</span> <a href="ave-html/blog-single.html#" rel="bookmark"> <time class="entry-date published updated" datetime="2018-03-13T09:25:41+00:00">March 13, 2018</time> </a> </span>
+                                        <span class="cat-links"> <span class="block text-uppercase ltr-sp-1">Published in:</span> <a href="ave-html/blog-single.html#" rel="category tag">Business</a> </span>
+                                    </div>
+                                    <!-- /.post-meta -->
+                                    <div class="blog-single-details-extra">
+</div>
+                                    <!-- /.blog-single-details-extra -->
+                                </header>
+                                <!-- /.blog-single-header -->
+                            </div>
+                            <!-- /.col-md-6 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.blog-single-details -->
+            </div>
+            <!-- /.blog-single-cover -->
+
+            <article class="blog-single">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="blog-single-content entry-content expanded pull-up">
+                                <p class="add-dropcap"></p>
+                                <div class="fullwidth">
+                                    <figure>
+</figure>
+                                </div>
+                                <!-- /.fullwidth -->
+                                <!-- /.stretch-to-sides -->
+                            </div>
+                            <!-- /.blog-single-content entry-content -->
+                            <footer class="blog-single-footer entry-footer">
+                                <span class="tags-links"> <a href="ave-html/blog-single.html#" rel="tag">Granada</a> <a href="ave-html/blog-single.html#" rel="tag">Spain</a> <a href="ave-html/blog-single.html#" rel="tag">Travel</a> </span>
+                                <span class="share-links"> <span class="ltr-sp-1 text-uppercase">Share On</span> <ul class="branded circle social-icon social-icon-sm">
+                                        <li>
+                                            <a href="ave-html/blog-single.html#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="ave-html/blog-single.html#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="ave-html/blog-single.html#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="ave-html/blog-single.html#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul><!-- /.social-icon --> </span>
+                                <!-- /.share-links -->
+                            </footer>
+                            <!-- /.blog-single-footer entry-footer -->
+                            <div class="post-author">
+                                <figure>
+                                    <img src="ave-html/assets/demo/avatars/avatar-2.jpg" alt="avatar">
+                                </figure>
+                                <div class="clearfix post-author-info">
+                                    <h3><a href="ave-html/blog-single.html#">Nicole choman</a></h3>
+                                    <h6>ceo</h6>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde.</p>
+                                </div>
+                                <!-- /.post-author-info -->
+                            </div>
+                            <!-- /.post-author -->
+                            <nav class="post-nav">
+                                <div class="nav-previous">
+                                    <a href="ave-html/blog-single.html#" rel="prev"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+                                            <g>
+                                                <line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+                                                <polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+                                            </g>
+                                        </svg> <span class="screen-reader-text">Previous Article</span> <span aria-hidden="true" class="nav-subtitle">Previous Article</span> <span class="nav-title">Compare prices find the best computer accessory</span> </a>
+                                </div>
+                                <div class="nav-next">
+                                    <a href="ave-html/blog-single.html#" rel="next"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+                                            <g transform="rotate(180 12,12) ">
+                                                <line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+                                                <polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+                                            </g>
+                                        </svg> <span class="screen-reader-text">Next Article</span> <span aria-hidden="true" class="nav-subtitle">Next Article</span> <span class="nav-title">Enhance wellness by doing something different!</span> </a>
+                                </div>
+                            </nav>
+                            <!-- /.post-nav -->
+                        </div>
+                        <!-- /.col-md-8 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->

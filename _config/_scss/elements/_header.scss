@@ -1,0 +1,137 @@
+header {
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    background-color: #2d2d2d;
+    padding: 20px 15px;
+
+    .alx-logo {
+      img {
+        height: 36px;
+      }
+    }
+  }
+
+
+  .alx-social-links {
+    margin-right: 100px;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  .alx-logo {
+    outline: none;
+
+    &__white {
+      display: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      &__dark {
+        display: none;
+      }
+
+      &__white {
+        display: block;
+      }
+    }
+  }
+}
+
+.alx-right-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.alx-nav {
+  display: none;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      list-style: none;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.alx-burger {
+  // float: right
+  // display: none
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 2;
+
+  span:after, span:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 8px;
+  }
+
+  span:after {
+    top: 16px;
+  }
+
+  span {
+    position: relative;
+    display: block;
+  }
+
+  span, span:after, span:before {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    transition: all easy 0.3s;
+    border-radius: 2px;
+  }
+
+  span:before {
+    width: 60%;
+  }
+
+  &:hover {
+    span:before {
+      transform: translateX(-11px);
+    }
+  }
+
+  &.on, &__open {
+    span {
+      background-color: transparent;
+    }
+
+    span:before {
+      transform: rotate(-45deg) translate(-5px, 0px) translateX(0) !important;
+      width: 100%;
+    }
+
+    span:after {
+      transform: rotate(45deg) translate(-5px, 0px);
+    }
+  }
+}

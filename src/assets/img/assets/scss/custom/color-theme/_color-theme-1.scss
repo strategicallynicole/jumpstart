@@ -1,0 +1,62 @@
+//Color theme main
+//-----------------------------------
+
+$primary:                 #2e1a47;
+
+$secondary:               #120a22;
+/*$secondary-1:           #eb8b23;*/
+$secondary-1:             #f6cc1b;
+$secondary-2:             #140a23;
+$secondary-3:             #2e1a47; /*#f6cc1b;
+*/
+$secondary-4:             #5f2d78;
+$secondary-7:             #563a82;
+
+$secondary-5:             #000;
+$secondary-6:             #fff;
+$gradient1:			      #EB8B23;
+$gradient2:			      #E34256; 
+$gradient3:			      #AF206E;
+$mainpurple:              #2e1a47;
+$blackpurple:             #140a23;
+$yellow:                  #f6cc1b;
+$orange:			      #EB8B23;
+$purple1:		   	      #6A3C98;
+$purple:                  #6A3C98;
+
+$purple2:                 #5f2d78;
+$purple3:                 #6A3C98;
+$purple4:                 #6c5ba7;
+$pink:                #AF206E;
+$darkpink:                #AF206E;
+$lightpink:               #E34256;
+
+
+
+
+
+// Palette.
+$palette: (
+    deep:				#341B50,
+    bg:					#6A3C98,
+    bg-alt:				#261c3e,
+    fg:					rgba(255,255,255,0.55),
+    fg-bold:			#ffffff,
+    fg-light:			rgba(255,255,255,0.35),
+    border:				rgba(255,255,255,0.15),
+    border-bg:			rgba(255,255,255,0.05),
+    accent1:			#5f2d78,
+    accent1-alt:		#5f2d78,
+    accent2:			#563a82,
+    accent2-alt:		#6c5ba7,
+    accent3:			#6A3C98,
+    accent3-alt:		darken(#8A51C3, 10),
+    orange:				#EB8B23,
+    red:				#E34256,
+    pink:				#AF206E,
+    gradient1:			#EB8B23, 
+    gradient2:			#E34256, 
+    gradient3:			#AF206E,
+    icons:				#2e1a47,
+    yellow:             #f6cc1b
+);

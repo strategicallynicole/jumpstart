@@ -1,0 +1,93 @@
+<!-- Pricing plans-->
+      <section class="section section-lg" id="pricing">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xxl-10">
+              <div class="group-20 d-sm-flex align-items-sm-end justify-content-sm-between text-center">
+                <h2>Pricing Plan</h2>
+                <div>
+                        <!-- Multi switch-->
+                        <div class="switch-text group-25 d-inline-flex align-items-center justify-content-center" id="multiswitch">
+                          <div><span class="switch-text-left biggest">Annual</span><span class="switch-text-right biggest ml-2 border-left pl-2">Monthly</span></div>
+                                <div class="switch-toggle-modern" data-multi-switch='{"targets":"#multiswitch, #pricing-group","state":true}'>
+                                  <div class="guide"></div>
+                                  <div class="slider">
+                                    <div class="slider-dot"></div>
+                                    <div class="slider-dot"></div>
+                                  </div>
+                                </div>
+                        </div>
+                </div>
+              </div>
+              <div class="pricing-group offset-md" id="pricing-group">
+                <!-- Owl Carousel-->
+                <div class="owl-carousel owl-style-1 owl-item-end" data-owl="{&quot;loop&quot;:false,&quot;mouseDrag&quot;:false,&quot;dots&quot;:true,&quot;autoplay&quot;:false,&quot;responsive&quot;:{&quot;768&quot;:{&quot;items&quot;:2},&quot;992&quot;:{&quot;items&quot;:3},&quot;1600&quot;:{&quot;items&quot;:3,&quot;margin&quot;:100}}}">
+                        <!-- Pricing modern-->
+                        <article class="pricing-modern pricing-success block block-sm block-center" data-animate='{"class":"fadeInUp"}'>
+                          <div class="pricing-modern-subtitle">Starter</div>
+                          <div class="pricing-modern-divider">
+                            <hr class="divider">
+                          </div>
+                          <div class="pricing-modern-title h4">Basic</div>
+                          <div class="pricing-modern-text">Ut enim ad minim veniam, quis nostrud sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                          <div class="pricing-modern-details"><span class="pricing-modern-price h4"><span class="pricing-month">$14</span><span class="pricing-year">$159</span></span><span class="pricing-modern-period h5"> / <span class="pricing-month">month</span><span class="pricing-year">year</span></span></div>
+                          <div class="pricing-modern-btn">
+                            <button class="btn btn-sm" data-modal-trigger='{"target":"#modal"}'>Select Plan</button>
+                          </div>
+                        </article>
+                        <!-- Pricing modern-->
+                        <article class="pricing-modern pricing-secondary block block-sm block-center" data-animate='{"class":"fadeInUp"}'>
+                          <div class="pricing-modern-subtitle">Personal</div>
+                          <div class="pricing-modern-divider">
+                            <hr class="divider">
+                          </div>
+                          <div class="pricing-modern-title h4">Standard</div>
+                          <div class="pricing-modern-text">Ut enim ad minim veniam, quis nostrud sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                          <div class="pricing-modern-details"><span class="pricing-modern-price h4"><span class="pricing-month">$30</span><span class="pricing-year">$350</span></span><span class="pricing-modern-period h5"> / <span class="pricing-month">month</span><span class="pricing-year">year</span></span></div>
+                          <div class="pricing-modern-btn">
+                            <button class="btn btn-sm" data-modal-trigger='{"target":"#modal"}'>Select Plan</button>
+                          </div>
+                        </article>
+                        <!-- Pricing modern-->
+                        <article class="pricing-modern pricing-primary block block-sm block-center" data-animate='{"class":"fadeInUp"}'>
+                          <div class="pricing-modern-subtitle">For team</div>
+                          <div class="pricing-modern-divider">
+                            <hr class="divider">
+                          </div>
+                          <div class="pricing-modern-title h4">Premium</div>
+                          <div class="pricing-modern-text">Ut enim ad minim veniam, quis nostrud sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                          <div class="pricing-modern-details"><span class="pricing-modern-price h4"><span class="pricing-month">$50</span><span class="pricing-year">$550</span></span><span class="pricing-modern-period h5"> / <span class="pricing-month">month</span><span class="pricing-year">year</span></span></div>
+                          <div class="pricing-modern-btn">
+                            <button class="btn btn-sm" data-modal-trigger='{"target":"#modal"}'>Select Plan</button>
+                          </div>
+                        </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Modal-->
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <h4>Get an offer for<br>a basic plan</h4>
+              <!--RD Mailform-->
+              <form class="rd-mailform" data-form-output="modal-form-output-global" data-form-type="contact" method="post" action="components/rd-mailform/rd-mailform.php">
+                <div class="form-group">
+                  <input class="form-control" type="text" name="name" placeholder="Your name *" data-constraints="@Required">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="email" name="email" placeholder="Your E-mail *" data-constraints="@Email @Required">
+                </div>
+                <div class="offset-xs">
+                  <button class="btn btn-block" type="submit">Send Request</button>
+                </div>
+              </form>
+            </div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-output snackbar snackbar-secondary" id="modal-form-output-global"></div>

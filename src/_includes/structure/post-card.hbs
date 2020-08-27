@@ -1,0 +1,54 @@
+
+									<article class="boxy padding-twenty-five liquid-lp liquid-blog-item liquid-blog-item-grid bg-white mb-50">
+
+										<figure class="liquid-lp-media">
+											<a href="{{@site.url}}">
+                        <img class="pf-hover-blurimage" src="" alt="{{title}}">
+											</a>
+										</figure>
+										
+										<div class="liquid-blog-item-inner">
+											
+											<a href="{{@site.url}}" class="liquid-overlay-link">{{title}}</a>
+									
+											<header class="liquid-lp-header">
+												<h2 class="liquid-lp-title font-weight-bold h3 size-sm">
+													<a href="{{@site.url}}" data-split-text="text" data-split-options='{ "type": "lines" }'>{{title}}</a>
+												</h2>
+												<div class="liquid-lp-details text-center"><ul class="text-center list-inline"><li class="text-center p-1"><time class="liquid-lp-date" datetime="{{date}}"><i class="fa fas fa-calendar"></i> {{date}}</time></li>
+		  {{#if primary_tag}}
+                            	<li class="p1 text-center"> <ul class="liquid-lp-category">
+                                   {{#foreach tags}}
+                    								<i class="fa fas fa-tag"></i>	<a href="{{@site.url}}">{{name}} </a>												
+
+                                                    {{/foreach}}                  
+                        
+</li>
+                        {{/if}}  <li class="p-1"><i class="text-center fa fas fa-clock"></i> {{reading_time}}	
+							</li></ul>
+													
+												</div><!-- /.liquid-lp-details -->
+											</header>
+											
+											<div class="liquid-lp-excerpt">
+<p>{{excerpt}}</p>											</div><!-- /.latest-post-excerptc -->
+											
+											<footer class="liquid-lp-footer">
+
+
+
+											
+
+														<a href="{{@site.url}}" class="btn btn-underlined text-uppercase font-size-12 font-weight-bold ltr-sp-2 color-secondary text-hover-white">
+												<span>
+													<span class="btn-txt">Continue Reading <i class="fad fa-arrow-circle-right"></i></span>
+												</span>
+											</a>
+											</footer>
+											
+										</div><!-- /.liquid-blog-item-inner -->
+										
+									</article>
+
+							
+

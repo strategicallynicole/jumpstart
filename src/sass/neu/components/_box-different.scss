@@ -1,0 +1,109 @@
+/* ------------------------------------------------------------ *\
+	Box Different
+\* ------------------------------------------------------------ */
+
+.box-different {
+	width: 350px;
+	padding: 25px 38px 38px;
+	border-radius: 24px;
+	background: linear-gradient(129.9deg, #26272B 12.58%, #34393F 93.19%);
+	box-shadow: 4px 3px 19px #0D0E0F, -5px -5px 20px #40464E;
+
+	@include breakpoint-down(mobile) {
+		width: auto;
+		padding: 25px 18px 38px;
+	}
+
+	.box__head {
+		padding-bottom: 12px;
+		text-align: center;
+	}
+
+	.box__title {
+		font-size: 20px;
+		font-weight: 400;
+		color: $c-white;
+	}
+
+	.box__counter {
+		position: relative;
+		height: 64px;
+		width: 64px;
+		margin: 0 auto;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(134.66deg, #26272B 9.53%, #34393F 95.92%);
+		box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+		font-weight: 400;
+		font-size: 20px;
+		color: $c-white;
+		text-align: center;
+		letter-spacing: 1.5px;
+
+		&:after {
+			content: '';
+			background: linear-gradient(147.41deg, rgba(64, 72, 93, 0.4) 6.32%, rgba(96, 106, 130, 0.4) 92.25%), linear-gradient(127.99deg, #E6E7ED -79.65%, #F7F8FA 151.25%);
+			background-blend-mode: soft-light, normal;
+			box-shadow: 4px 3px 19px #BDC1D1, -7px -7px 16px #FCFDFF, inset 1px 1px 16px #E9EAF2, inset -1px -1px 16px #F5F6FA;
+		}
+	}
+
+	.box__decoration {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 12px;
+		height: 12px;
+		background: linear-gradient(134.66deg, #26272B 9.53%, #34393F 95.92%);
+		box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+		transform: rotate(-45deg) translateX(-50%);
+
+		&:after {
+			content: '';
+			background: linear-gradient(147.41deg, rgba(64, 72, 93, 0.4) 6.32%, rgba(96, 106, 130, 0.4) 92.25%), linear-gradient(127.99deg, #E6E7ED -79.65%, #F7F8FA 151.25%);
+			background-blend-mode: soft-light, normal;
+			box-shadow: 4px 3px 19px #BDC1D1, -7px -7px 16px #FCFDFF, inset 1px 1px 16px #E9EAF2, inset -1px -1px 16px #F5F6FA;
+		}
+	}
+
+	.box__bars {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		font-weight: 400;
+		font-size: 12px;
+		color: #757E95;
+		text-transform: uppercase;
+	}
+
+	.box__body {
+		padding-top: 28px;
+	}
+
+	.box__bar {
+		text-align: center;
+	}
+
+	.box__bar > span {
+		display: flex;
+		align-items: flex-end;
+		width: 16px;
+		margin-bottom: 13px;
+		border-radius: 10px;
+		background: linear-gradient(106.3deg, #26272B 9.53%, #34393F 95.92%);
+		box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+	}
+
+	.box__bar > span > span {
+		width: 100%;
+		border-radius: 10px;
+		background: linear-gradient(95.22deg, #2F1B49 12.58%, #6C5BA7 89.78%);
+		box-shadow: 4px 3px 19px #0D0F0F, -5px -5px 20px #404E4A, inset 1px 1px 7px #6C5BA7;
+	}
+
+	.box__bar.active > span > span {
+		border: 3px solid #6C5BA7;
+	}
+}

@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+	Radio Group
+\* ------------------------------------------------------------ */
+
+.radio-group {
+	max-width: 360px;
+	padding: 7px 8px 9px 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+	background: linear-gradient(129.9deg, #26272B 12.58%, #34393F 93.19%);
+	box-shadow: 4px 3px 19px #0D0E0F, -5px -5px 20px #40464E;
+
+	@include breakpoint-down(mobile) {
+		padding: 7px 4px 9px 4px;
+	}
+}

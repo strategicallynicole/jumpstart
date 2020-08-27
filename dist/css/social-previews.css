@@ -1,0 +1,303 @@
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Baloo 2 Regular"), local("Baloo-2-Regular"), url("../src/fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Baloo 2 Medium"), local("Baloo-2-Medium"), url("../src/fonts/baloo-2-v1-latin-500.woff2") format("woff2");
+  font-display: swap; }
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+html {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed; }
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; }
+  html {
+    scroll-behavior: initial; } }
+
+h1,
+.tdbc-h1 {
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h2,
+.tdbc-h2 {
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h3,
+.tdbc-h3 {
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h4,
+.tdbc-h4 {
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h1,
+.tdbc-h1 {
+  font-size: 4.2rem;
+  font-size: min(max(3rem, 5vw), 4.2rem); }
+
+h2,
+.tdbc-h2 {
+  font-size: 3.15rem;
+  font-size: min(max(2.5rem, 5vw), 3.15rem); }
+
+h3,
+.tdbc-h3 {
+  font-size: 2rem; }
+
+h4,
+.tdbc-h4 {
+  font-size: 1.35rem;
+  color: #5e5d6b; }
+
+p,
+li {
+  font-size: 1.15rem; }
+
+p {
+  margin: 0 0 1rem; }
+
+article > ul > li + li,
+article > ol > li + li {
+  margin-top: 1rem; }
+
+article * + h2 {
+  margin-top: 4rem; }
+
+article * + h3 {
+  margin-top: 2rem; }
+
+strong {
+  font-weight: 500; }
+
+a:not(.tdbc-button) {
+  color: #171392; }
+
+code:not([class*="language"]) {
+  display: inline-flex;
+  padding: 0.15em;
+  background-color: #fff;
+  color: #5e5d6b;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  border: 1px solid #adacb7;
+  border-radius: 2px;
+  font-size: 0.75em;
+  line-height: 1.1; }
+
+pre code:not([class*="language"]) {
+  width: 100%;
+  max-width: calc(100vw - 2rem);
+  overflow-x: auto; }
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid #d92d7a;
+  color: #5e5d6b; }
+  blockquote,
+  blockquote p {
+    font-size: 1.35rem; }
+  blockquote + * {
+    margin-top: 3rem; }
+
+.tdbc-lead {
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 1em;
+  line-height: 1.3; }
+
+.tdbc-list-unstyled {
+  list-style: none;
+  padding: 0; }
+
+.tdbc-content-maxlength {
+  max-width: 80ch; }
+
+.tdbc-anchor {
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: 180ms opacity ease-in-out;
+  opacity: 0.6;
+  font-size: 0.65em;
+  vertical-align: top; }
+  .tdbc-anchor:hover {
+    opacity: 1; }
+
+.tdbc-text-align--left {
+  text-align: left; }
+
+.tdbc-text-align--center {
+  text-align: center; }
+  .tdbc-text-align--center > a {
+    align-self: center !important; }
+
+.tdbc-text-align--right {
+  text-align: right; }
+
+.tdbc-background--primary {
+  background-color: #171392; }
+
+.tdbc-background--secondary {
+  background-color: #d92d7a; }
+
+.tdbc-background--background {
+  background-color: #f9f9f9; }
+
+.tdbc-background--gray {
+  background-color: #5e5d6b; }
+
+.tdbc-background--light {
+  background-color: #fff; }
+
+.tdbc-ink--primary,
+a.tdbc-ink--primary {
+  color: #171392; }
+
+.tdbc-ink--primary > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-ink--secondary,
+a.tdbc-ink--secondary {
+  color: #d92d7a; }
+
+.tdbc-ink--secondary > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-ink--text,
+a.tdbc-ink--text {
+  color: #252450; }
+
+.tdbc-ink--text > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-ink--gray > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-ink--light,
+a.tdbc-ink--light {
+  color: #fff; }
+
+.tdbc-ink--light > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-ink--dark,
+a.tdbc-ink--dark {
+  color: rgba(0, 0, 0, 0.87); }
+
+.tdbc-ink--dark > a:not(.tdbc-button) {
+  color: inherit; }
+
+.tdbc-mx-auto {
+  margin-right: auto;
+  margin-left: auto; }
+
+.tdbc-my-sm {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.tdbc-mt-sm {
+  margin-top: 1rem; }
+
+.tdbc-my-md {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.tdbc-mt-md {
+  margin-top: 3rem; }
+
+.tdbc-my-lg {
+  margin-top: 6rem;
+  margin-bottom: 6rem; }
+
+.tdbc-mt-lg {
+  margin-top: 6rem; }
+
+.tdbc-my-xl {
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
+.tdbc-mt-xl {
+  margin-top: 10rem; }
+
+.tdbc-my-auto {
+  margin-top: "auto";
+  margin-bottom: "auto"; }
+
+.tdbc-mt-auto {
+  margin-top: "auto"; }
+
+.tdbc-mb-none {
+  margin-bottom: 0; }
+
+body {
+  border: 3px solid #d92d7a;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: "Baloo 2", sans-serif; }
+  body h1 {
+    font-size: 2.5rem; }

@@ -1,0 +1,16 @@
+{% macro icon(props) %}
+<div class="neuicon"><svg
+    width="{{ props.width if props.width else "64" }}"
+    height="{{ props.height if props.height else "64" }}"
+    class="neuicon"
+    role="img"
+    aria-labelledby="{{ props.id if props.id else "link" }}-title"
+>
+    <title id="{{ props.id if props.id else "link" }}-title">{{ props.id if props.id else "link" }}</title>
+    <use
+        xlink:href="#{{ props.id if props.id else "link" }}"
+
+    ></use>
+</svg>
+{% endmacro %}
+</div>

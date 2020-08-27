@@ -1,0 +1,143 @@
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent;
+  }
+}
+
+@mixin mt($time) {
+  transition: all $time ease-in-out;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent;
+  }
+}
+
+@mixin clearfix {
+  &:after, &:before {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// ----
+// libsass (v3.2.5)
+// ----
+
+// margin and padding values array
+$space-values : (
+  0,
+  3,
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50
+) !default;
+
+// margin and padding shorthands
+$space-prefixes : (
+  p  : padding,
+  pt : padding-top,
+  pr : padding-right,
+  pb : padding-bottom,
+  pl : padding-left,
+  m  : margin,
+  mt : margin-top,
+  mr : margin-right,
+  mb : margin-bottom,
+  ml : margin-left,
+) !default;
+
+@mixin make-spaces() {
+  @each $attr-short, $attr-long in $space-prefixes { 
+    @each $value in $space-values {
+      .#{$attr-short}-#{$value} {
+        #{$attr-long}: #{$value}#{'px'};
+      }
+    }
+  }
+}
+
+@include make-spaces();
+
+// margin and padding values array
+$space-values : (
+  0,
+  3,
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50
+) !default;
+
+// margin and padding shorthands
+$space-prefixes : (
+  p  : padding,
+  pt : padding-top,
+  pr : padding-right,
+  pb : padding-bottom,
+  pl : padding-left,
+  m  : margin,
+  mt : margin-top,
+  mr : margin-right,
+  mb : margin-bottom,
+  ml : margin-left,
+) !default;
+
+@mixin make-spaces() {
+  @each $attr-short, $attr-long in $space-prefixes { 
+    @each $value in $space-values {
+      .#{$attr-short}-#{$value} {
+        #{$attr-long}: #{$value}#{'px'};
+      }
+    }
+  }
+}
+
+@include make-spaces();

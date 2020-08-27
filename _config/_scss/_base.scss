@@ -1,0 +1,47 @@
+::selection {
+    color: $chosenone;
+    background: #212121;
+    }
+  body {
+    min-height: 100%;
+    @include bg-grad;
+    @include bg-size-cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $light-text-on-dark-bg;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    }
+    strong {
+        font-weight: 300;
+
+    }
+    .superlg {
+        font-size: xx-large;
+    }
+
+    .verylg {
+        font-size: x-large;
+    }
+
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: 100;
+        text-transform: normal;
+        font-family: 'Raleway';
+    }
+
+    .text-center {
+        text-align: center;
+
+    }
+
+    p.fancy {
+        padding: 20px;
+    }
+.white {
+    color: #fff !important;
+}
+    .no-underline {
+        text-decoration: none !important;
+    }

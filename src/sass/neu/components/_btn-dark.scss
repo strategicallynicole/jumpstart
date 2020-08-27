@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Btn Dark
+\* ------------------------------------------------------------ */
+
+.btn-dark {
+	width: 282px;
+	height: 96px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	background: linear-gradient(166.13deg, #32383E -69.07%, #17191C 122.22%);
+	font-size: 28px;
+	text-decoration: none;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	letter-spacing: 0.02em;
+	box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.5), -4px -2px 16px rgba(195, 200, 205, 0.09);
+	transition: background .3s, opacity .3s, box-shadow .3s;
+	line-height: 1.33;
+
+	&:hover {
+		background: linear-gradient(85.09deg, #31294D -7.5%, #6C5BA7 146.08%);
+		opacity: 0.8;
+		border: 2px solid #2D2F34;
+		box-shadow: 10px 10px 20px #0D0E0F, -3px -3px 9px rgba(53, 59, 66, 0.4), inset 1px 1px 9px #2D2E35, inset 7px 7px 20px rgba(0, 0, 0, 0.75);
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 18px;
+		height: auto;
+		padding: 10px 13px;
+	}
+}

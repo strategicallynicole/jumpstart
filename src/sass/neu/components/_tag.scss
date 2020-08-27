@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+	Tag
+\* ------------------------------------------------------------ */
+
+.tag {
+	min-height: 64px;
+	width: 180px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(162.03deg, #26272B 9.53%, #34393F 95.92%);
+	box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+	border-radius: 16px;
+	font-size: 20px;
+	color: $c-white;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}

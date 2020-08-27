@@ -1,0 +1,68 @@
+//Masonry layouts
+.alx-isotope-item {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.alx-layout-isotope[data-grid="2"] {
+  .alx-isotope-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    @include media-breakpoint-down(xs) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.alx-layout-isotope[data-grid="3"] {
+  .alx-isotope-item {
+    flex: 0 0 calc(33.333% - 1px);
+    max-width: calc(33.333% - 1px);
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 calc(50% - 1px);
+      max-width: calc(50% - 1px);
+    }
+
+
+    @include media-breakpoint-down(xs) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.alx-layout-isotope[data-grid="4"] {
+  .alx-isotope-item {
+    flex: 0 0 calc(25% - 1px);
+    max-width: calc(25% - 1px);
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 calc(33.333% - 1px);
+      max-width: calc(33.333% - 1px);
+    }
+
+
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 calc(50% - 1px);
+      max-width: calc(50% - 1px);
+    }
+
+
+    @include media-breakpoint-down(xs) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.alx-isotope-gap {
+  .alx-isotope-item {
+    padding: 15px;
+  }
+}

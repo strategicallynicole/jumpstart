@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	Radio Alt
+\* ------------------------------------------------------------ */
+
+.radio-alt {
+	input {
+		position: absolute;
+		opacity: 0;
+	}
+
+	label {
+		height: 64px;
+		min-width: 168px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		font-weight: 300;
+		color: $c-white;
+		text-transform: uppercase;
+		border-radius: 20px;
+		transition: box-shadow .3s;
+
+		&:hover {
+			box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+		}
+	}
+
+	input:checked + label {
+		box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+	}
+}

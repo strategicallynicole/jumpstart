@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Panel
+\* ------------------------------------------------------------ */
+
+.panel {
+	max-width: 200px;
+	width: 100%;
+	padding: 25px 11px 50px;
+	border-radius: 16px;
+	background: linear-gradient(93.84deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%);
+	box-shadow: 22px 22px 60px rgba(0, 0, 0, 0.5), -5px -6px 16px rgba(195, 200, 205, 0.04);
+
+	.panel__head {
+		text-align: center;
+	}
+
+	.panel__title {
+		display: flex;
+		align-items: center;
+		font-size: 21px;
+		font-family: $ff-raleway;
+		font-weight: 400;
+		color: #6D737A;
+		text-align: center;
+		line-height: 1;
+		text-shadow: -1px 6px 11px rgba(16, 18, 20, 0.1);
+	}
+
+	.panel__body {
+		padding-top: 27px;
+	}
+
+	.panel__actions {
+		text-align: center;
+	}
+}

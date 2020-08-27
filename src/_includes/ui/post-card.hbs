@@ -1,0 +1,42 @@
+<div class="lqd-column col-md-4 masonry-item text-black" style="padding-top: 0px !important; padding-right: 0px !important; padding-left: 0px !important;">
+	<article class="liquid-lp liquid-blog-item liquid-blog-item-grid liquid-blog-scheme-light">
+		{{#if feature_image}} 
+			<figure class="liquid-lp-media">
+				<a href="{{@site.url}}">
+					<img style="padding-top: 0px !important; padding-right: 0px !important; padding-left: 0px !important; margin: 0px !important; width: 100% !important;" src="{{feature_image}}" alt="{{title}}">
+				</a>
+			</figure>
+		{{/if}}
+		<div class="liquid-blog-item-inner">
+			<a href="{{@site.url}}" class="liquid-overlay-link">
+				{{title}}
+			</a>
+			<header class="liquid-lp-header">
+				<h2 class="liquid-lp-title font-weight-bold h3 size-sm">
+					<a href="{{@site.url}}" 
+						data-split-text="text" 
+						data-split-options='{ "type": "lines" }'>
+						{{title}}</a>
+				</h2>
+				
+			</header>
+			
+			<div class="liquid-lp-excerpt">
+				{{excerpt characters="10"}}	
+			</div><!-- /.latest-post-excerptc -->
+			
+			<footer class="text-black liquid-lp-footer">
+					<p class="liquid-lp-details text-black"><i class="fad fa-clock"></i>&nbsp;{{reading_time}} <i class="fad fa-calendar"></i>&nbsp;<time class="liquid-lp-date" datetime="{{date}}">{{date}}</time> 
+					<ul class="liquid-lp-category">
+							<li>
+								<i class="fad fa-tags"></i>&nbsp;
+								<a class=" btn btn-underlined text-uppercase font-size-12 font-weight-bold ltr-sp-2 color-secondary" href="{{@site.url}}">{{name}}</a>
+							</li>
+					</ul>
+				</div><!-- /.liquid-lp-details -->
+			</footer>
+		</div><!-- /.liquid-blog-item-inner -->
+	</article>
+</div><!-- /.col-md-4 -->
+
+

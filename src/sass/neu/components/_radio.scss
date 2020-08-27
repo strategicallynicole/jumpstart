@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------ *\
+	Radio
+\* ------------------------------------------------------------ */
+
+.radio {
+	input {
+		position: absolute;
+		opacity: 0;
+	}
+
+	label {
+		position: relative;
+		width: 56px;
+		height: 56px;
+		display: block;
+		border: 1px solid transparent;
+		border-radius: 40px;
+		background: linear-gradient(137.63deg, #26272B 9.53%, #34393F 95.92%);
+		box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+		transition: border .3s, background .3s, box-shadow .3s;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			width: 24px;
+			height: 24px;
+			border-radius: 40px;
+			background: linear-gradient(126.93deg, #26272B 6.67%, #34393F 97.78%);
+			box-shadow: 1px 1px 5px #0D0E0F, -3px -3px 9px #353B42, inset 1px 1px 9px #2D2E35;
+			transition: transform .3s;
+		}
+	}
+
+	input:checked + label {
+		background: linear-gradient(130.46deg, #2E1A47 12.58%, #6C5BA7 89.78%);
+		border: 1px solid #6C5BA7;
+		box-shadow: 4px 3px 19px #0D0F0F, -5px -5px 20px #404E4B, inset 1px 1px 2px #6C5BA7;
+
+		&:before {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+}
+

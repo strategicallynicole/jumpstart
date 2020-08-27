@@ -36,7 +36,7 @@
     "luxon": "^1.23.0",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.0",
     "puppeteer": "3.1.0",
     "stylelint": "^13.6.1",
@@ -50,7 +50,14 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@tryghost/content-api": "^1.4.4",
     "chrome-aws-lambda": "3.1.1",
-    "puppeteer-core": "3.1.0"
+    "clean-css": "^4.2.3",
+    "eleventy-plugin-lazyimages": "^2.0.1",
+    "eleventy-plugin-local-images": "^0.4.0",
+    "env": "0.0.2",
+    "html-minifier": "^4.0.0",
+    "puppeteer-core": "3.1.0",
+    "sass": "^1.26.10"
   }
 }

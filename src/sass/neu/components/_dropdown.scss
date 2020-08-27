@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------ *\
+	Dropdown
+\* ------------------------------------------------------------ */
+
+.dropdown {
+	position: relative;
+	width: 360px;
+	border-radius: 20px;
+	background: linear-gradient(168.23deg, #26272B 12.58%, #34393F 93.19%);
+	color: $c-white;
+	box-shadow: 4px 3px 19px #0D0E0F, -5px -5px 20px #40464E;
+	font-size: 20px;
+
+	@include breakpoint-down(mobile) {
+		width: 250px;
+	}
+
+	> a {
+		position: relative;
+		padding: 19px 20px 19px 31px;
+		display: block;
+		font-weight: 400;
+		text-decoration: none;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 26px;
+			width: 14px;
+			height: 14px;
+			transform: translateY(-50%);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-image: url(../images/svg/arrow-small.svg);
+		}
+	}
+
+	> ul {
+		display: none;
+		padding: 5px 10px 28px 31px;
+		text-decoration: none;
+		list-style-type: none;
+	}
+
+	> ul > li + li {
+		margin-top: 24px;
+	}
+
+	> ul > li > a {
+		display: block;
+		font-weight: 300;
+		text-decoration: none;
+		transition: color .3s;
+
+		&:hover {
+			color: #6C5BA7;
+		}
+	}
+}

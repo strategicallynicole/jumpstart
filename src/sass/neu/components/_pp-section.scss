@@ -1,0 +1,79 @@
+/* ------------------------------------------------------------ *\
+	PP Section
+\* ------------------------------------------------------------ */
+
+.pp-section {
+	.pp-tableCell {
+		@media(max-height: 850px) {
+			display: block;
+		}
+	}
+}
+
+/*.pp-section.pp-table {
+	@media(max-height: 850px) {
+		height: 100vh;
+		overflow-y: auto;
+		display: block;
+		overflow-x: hidden;
+	}
+}*/
+
+#pp-nav {
+	top: auto;
+	bottom: calc(12vh - 4px);
+	left: calc(35vw + 11px);
+	transition: bottom .3s, left .3s;
+
+	@media(max-height: 900px) and (min-width: 768px) {
+		bottom: calc(5vh - 4px);
+		left: calc(30vw + 11px);
+	}
+
+	@include breakpoint-down(tablet) {
+		display: none;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	li + li {
+		margin-left: 5px;
+	}
+
+	span {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 14px;
+		height: 14px;
+		display: block;
+		border-radius: 26px;
+		border: 0;
+		background: linear-gradient(292.41deg, #798188 -100.18%, #1F2328 67.73%);
+		box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.23), -2px -1px 5px rgba(213, 230, 245, 0.11);
+		transition: background .3s, box-shadow .3s;
+	}
+
+	li a.active {
+		background: linear-gradient(292.41deg, #798188 -100.18%, #1F2328 67.73%);
+		box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.23), -2px -1px 5px rgba(213, 230, 245, 0.11);
+		border-radius: 26px;
+	}
+
+	a.active span {
+		background: linear-gradient(110.86deg, #FFFFFF -313.79%, #21262B 52.63%);
+		box-shadow: inset 2px 2px 2px rgba(26, 32, 38, 0.4);
+	}
+}
+
+#pp-nav.is-moved {
+	bottom: calc(16vh - 4px);
+	left: calc(61vw + 14px);
+}

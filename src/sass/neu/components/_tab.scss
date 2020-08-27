@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Tab
+\* ------------------------------------------------------------ */
+
+.tab {
+	position: absolute;
+	bottom: 100%;
+	right: 100%;
+	opacity: 0;
+	padding-left: 30px;
+	transform: scale(0);
+	transition: opacity .3s, transform .3s;
+	line-height: 1.94;
+
+	@include breakpoint-down(tablet) {
+		padding-left: 0;
+	}
+
+	.tab__image {
+		text-align: center;
+	}
+
+	h6 {
+		margin-bottom: 35px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	.tab__image {
+		margin-bottom: 64px;
+	}
+}
+
+.tab.is-active {
+	position: relative;
+	bottom: auto;
+	right: auto;
+	opacity: 1;
+	transform: scale(1);
+}

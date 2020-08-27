@@ -1,0 +1,55 @@
+{%if stylesandscripts %}
+{% set headerstylesandscripts %} 
+               {% block stylesandscripts  %}
+               {% endblock stylesandscripts %}
+                {% endset %}
+                {% endif %}
+                {% include "structure/head-default.njk" %}
+
+
+<body>
+	<div class="wrapper">
+		<!-- Your header goes here -->
+
+
+		<div class="main">
+
+
+				<div class="main__inner">
+                                                {% include "structure/bar.njk" %}
+
+		<div class="main__content">
+               {% if post.feature_image %}
+            <figure class="post-feature-image">
+                <img src="{{ post.feature_image }}" alt="{{ title }}">
+            </figure>
+        {% endif %}
+			<div class="shell">
+
+
+
+{% block content %}
+                        {% endblock content %}
+
+
+
+					</div><!-- /.main__content -->
+				</div><!-- /.main__inner -->
+			</div><!-- /.shell -->
+		</div><!-- /.main -->
+{% if nofooter %}
+{% else %}
+   {% include "partials/footer.njk" %}
+{% endif %}
+
+		<!-- Your footer goes here -->
+
+	</div><!-- /.wrapper -->
+
+</div>
+{% include "structure/footerscripts.njk" %}
+  {% block footerscripts %}
+    {% endblock footerscripts %}
+ 
+</body>
+</html>

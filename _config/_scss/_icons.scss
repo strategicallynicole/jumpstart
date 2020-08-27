@@ -1,0 +1,99 @@
+.neuicon {
+fill: linear-gradient(134.61deg, #26272B 9.53%, #34393F 95.92%);
+background: linear-gradient(134.61deg, #26272B 9.53%, #34393F 95.92%);
+box-shadow: 10px 10px 40px #0D0E0F, -10px -10px 40px #40464E;
+border-radius: 40px;
+color: #fff;
+font-size: 50px;
+@include transition;
+@include hovers;
+}
+
+
+.neuicon::after {
+    opacity: 0;
+    color: #fff;
+    background: linear-gradient(141.25deg, #26272B 9.53%, #34393F 95.92%);
+border: 1px solid #2D2F34;
+/* IconDownEffect */
+box-shadow: inset 5px 5px 22px #0D0E0F, inset -3px -3px 22px #40464E;
+@include transition;
+
+}
+
+
+.doyouicon-box {
+  background: linear-gradient(128.11deg, #26272B 6.67%, #34393F 97.78%);
+/* button down */
+box-shadow: 10px 10px 15px #0D0E0F, -13px -13px 19px #353B42, inset 10px 10px 15px #2D2E35;
+border-radius: 40px;
+width: fit-content;
+padding: 25px;
+  svg {
+  fill: linear-gradient(141.14deg, #26272B 9.53%, #34393F 95.92%) !important;
+  background: linear-gradient(141.14deg, #26272B 9.53%, #34393F 95.92%);
+  fill: transparent !important;
+  color: transparent !important;
+
+}
+}
+
+.imgicon {
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+.big {
+  width: 200px;
+  height: 200px;
+}
+.med {
+  width: 100px;
+  height: 100px;
+}
+.sm {
+  width: 65px;
+  height: 65px;
+}
+.fb {
+  background-image: url('../img/facebookup.png');
+  @include hovers;
+  @include transition;
+}
+  .fb:hover {
+    background-image: url('../img/facebookdown.png');
+    @include transition;
+  
+}
+
+.twitter {
+  background-image: url('../img/twitterup.png');
+  @include hovers;
+  @include transition;
+}
+  .twitter:hover {
+    background-image: url('../img/twitterdown.png');
+    @include transition;
+  
+}
+
+.linkedin {
+  background-image: url('../img/linkedinup.png');
+  @include hovers;
+  @include transition;
+}
+  .linkedin:hover {
+    background-image: url('../img/linkedindown.png');
+    @include transition;
+  
+}
+.rss {
+  background-image: url('../img/rssup.png');
+  @include hovers;
+  @include transition;
+}
+  .rss:hover {
+    background-image: url('../img/rssdown.png');
+    @include transition;
+  
+}

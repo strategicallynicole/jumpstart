@@ -1,0 +1,33 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: posts
+name: About
+---
+
+{% extends '../layouts/default.njk' %}
+
+{% set title = "OAKwave Marketing Strategy" %}
+
+{% set headerstylesandscripts %}
+          <link href="/assets/css/gandalf.css" type="css" />
+                {% endset %}
+
+{% block content %}
+
+<div class="gandalf">
+  <div class="fireball"></div>
+  <div class="skirt"></div>
+  <div class="sleeves"></div>
+  <div class="shoulders">
+    <div class="hand left"></div>
+    <div class="hand right"></div>
+  </div>
+  <div class="head">
+    <div class="hair"></div>
+    <div class="beard"></div>
+  </div>
+</div>
+   {% endblock content %}	
+

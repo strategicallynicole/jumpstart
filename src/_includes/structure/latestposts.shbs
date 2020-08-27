@@ -1,0 +1,25 @@
+	<section class="vc_row pt-50 pb-50">
+				<div class="container">
+				<div class="row">
+	<div class="col-sm-12 text-white text-center"><h2 class="text-white">Latest Posts</h2></div>
+</div>	<div class="row d-flex flex-wrap">
+
+					
+	{{#get "posts" limit="2" include="tags, feature_image, authors"}}
+						{{#foreach posts}}
+<div class="lqd-column col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-0 masonry-item">
+
+							{{> "ui/fancy-post-card" }}
+							</div>
+						{{/foreach}}
+					{{/get}}
+
+
+
+
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section> 
+
+

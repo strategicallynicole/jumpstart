@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------ *\
+	Fields
+\* ------------------------------------------------------------ */
+
+.field {
+	max-width: 360px;
+	width: 100%;
+	height: 64px;
+	padding: 0 15px;
+	border: 0;
+	border-radius: 20px;
+	background: linear-gradient(170.79deg, #26272B 9.53%, #34393F 95.92%);
+	box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+	font-size: 20px;
+	font-weight: 400;
+	color: $c-white;
+	line-height: 1;
+	transition: box-shadow .3s;
+
+	&:active,
+	&:focus {
+		box-shadow: 4px 3px 19px #0D0E0F, -5px -5px 20px #40464E;
+	}
+}
+
+/*  Field textarea  */
+.field--textarea {
+	max-width: 100%;
+	height: 158px;
+	width: 100%;
+	border: 0;
+	padding: 20px;
+	background: linear-gradient(171.11deg, #26272B 9.53%, #34393F 95.92%);
+	box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+	border-radius: 20px;
+	color: $c-white;
+	transition: background .3s, color .3s;
+	resize: none;
+
+	&:active,
+	&:focus {
+		background: linear-gradient(142.92deg, #26272B 12.58%, #34393F 93.19%);
+		box-shadow: 4px 3px 19px #0D0E0F, inset -5px -5px 20px #40464E;
+	}
+}
+
+.field--textarea--small {
+	width: 360px;
+	height: 232px;
+}

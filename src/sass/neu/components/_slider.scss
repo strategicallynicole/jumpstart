@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.slider {
+	height: 100vh;
+	overflow: visible !important;
+
+	@include breakpoint-down(tablet) {
+		height: auto;
+	}
+
+	.shell {
+		height: 100%;
+	}
+
+	.slider__inner {
+		height: 100%;
+		display: flex;
+	}
+
+	.slider__content {
+		position: relative;
+		width: calc(100% - 83px);
+		height: 100%;
+		margin-left: auto;
+
+		@include breakpoint-down(tablet) {
+			margin-left: auto;
+		}
+
+		@include breakpoint-down(mobile) {
+			width: 100%;
+		}
+	}
+}

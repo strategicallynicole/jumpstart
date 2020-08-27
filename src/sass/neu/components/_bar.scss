@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------ *\
+	Bar
+\* ------------------------------------------------------------ */
+
+.bar {
+	position: fixed;
+	top: 0;
+	left: 2%;
+	z-index: 10;
+	margin-top: 72px;
+	max-width: 83px;
+	padding: 15px 9px 16px;
+	border-radius: 20px;
+	background: linear-gradient(96.28deg, #353A40 10.44%, #121416 95.94%);
+	box-shadow: -8px -16px 56px rgba(108, 91, 167, 0.14), 52px 20px 88px rgba(2, 3, 3, 0.5), inset -16px -6px 80px rgba(248, 249, 249, 0.03);
+	text-align: center;
+	transition: height .3s;
+
+	@include breakpoint-down(tablet) {
+		position: fixed;
+		top: 0;
+		left: 15px;
+	}
+
+	@include breakpoint-down(mobile) {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		padding: 15px 11px 16px;
+	}
+}
+
+.bar__inner {
+	@include breakpoint-down(mobile) {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		overflow-x: auto;
+	}
+}
+
+.bar::-webkit-scrollbar {
+  display: none;
+}
+
+.bar--alt {
+	position: fixed;
+	top: 0;
+	left: 2%;
+
+	@include breakpoint-down(large-desktop) {
+		left: 15px;
+	}
+
+	@include breakpoint-down(mobile) {
+		top: auto;
+		left: 0;
+	}
+}
+
+.bar.is-open {
+	height: calc(100vh - 144px);
+	overflow-y: auto;
+	overflow-x: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	@media(min-height: 1100px) {
+		height: auto;
+	}
+
+	@include breakpoint-down(mobile) {
+		height: auto;
+	}
+}

@@ -1,0 +1,304 @@
+---
+layout: default.njk
+bodyclass: blog blog-single-default blog-scheme-light bg-vulcan
+cssfile: "/themes/original.css"
+fontawesome: true
+post: true
+---
+
+		<header class="main-header main-header-overlay" data-react-to-megamenu="true" data-sticky-header="true" data-sticky-options='{ "stickyTrigger": "first-section" }'>
+	{% include megamenu.html %}</header>
+		<!-- /.main-header -->
+		<main id="content" class="content py-0">
+			<div style="background-image: url('{{ site.url }}/assets/img/rings.svg'); background-size: cover; background-position: center;" class="blog-single-cover scheme-light" data-fullheight="true" data-inview="true" data-inview-options='{ "onImagesLoaded": true }'>
+				
+				<div class="blog-single-details">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<header class="entry-header blog-single-header" data-parallax="true" data-parallax-to='{ "opacity": 0, "translateY": "30%" }' data-parallax-options='{ "triggerHook": "0.3" }'>
+									<h1 class="blog-single-title entry-title h2" data-split-text="true" data-split-options='{ "type": "lines" }'>{{page.title}}</h1>
+								{% include post-meta.html %}		<!-- /.post-meta -->
+									<div class="blog-single-details-extra">
+										{% include breadcrumbs.html %}
+			
+			</div>
+									<!-- /.blog-single-details-extra -->
+								</header>
+								<!-- /.blog-single-header -->
+							</div>
+							<!-- /.col-md-6 -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.container -->
+				</div>
+				<!-- /.blog-single-details -->
+			</div>
+			<!-- /.blog-single-cover -->
+		
+		
+
+			<article name="first-section" class="blog-single">
+				<div class="container">
+					<div class="row">{% include particles.html %}
+						<div class="col-md-8 col-md-offset-2">
+							<div class="blog-single-content entry-content expanded pull-up">
+								
+								{{ content }}
+							</div>
+							<!-- /.blog-single-content entry-content -->
+							<footer class="blog-single-footer entry-footer">
+								<span class="tags-links"> {% include category-tag.html %} </span>
+								<span class="share-links"> <span class="ltr-sp-1 text-uppercase">Share On</span> 				{% include share-buttons.html %}
+							</span>
+								<!-- /.share-links -->
+							</footer>
+							<!-- /.blog-single-footer entry-footer -->
+							<div class="post-author">
+								<figure>
+									<img src="./assets/demo/avatars/avatar-2.jpg" alt="avatar">
+								</figure>
+								<div class="clearfix post-author-info">
+									<h3><a href="#">Nicole choman</a></h3>
+									<h6>ceo</h6>
+									<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde.</p>
+								</div>
+								<!-- /.post-author-info -->
+							</div>
+							<!-- /.post-author -->
+							<nav class="post-nav">
+								<div class="nav-previous">
+									<a href="#" rel="prev"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+											<g>
+												<line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+												<polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+											</g>
+										</svg> <span class="screen-reader-text">Previous Article</span> <span aria-hidden="true" class="nav-subtitle">Previous Article</span> <span class="nav-title">Compare prices find the best computer accessory</span> </a>
+								</div>
+								<div class="nav-next">
+									<a href="#" rel="next"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+											<g transform="rotate(180 12,12) ">
+												<line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+												<polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+											</g>
+										</svg> <span class="screen-reader-text">Next Article</span> <span aria-hidden="true" class="nav-subtitle">Next Article</span> <span class="nav-title">Enhance wellness by doing something different!</span> </a>
+								</div>
+							</nav>
+							<!-- /.post-nav -->
+						</div>
+						<!-- /.col-md-8 -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+				<div id="comments" class="comments-area">
+					<div id="respond" class="comment-respond filled">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2">
+									<h3 id="reply-title" class="comment-reply-title">Leave a comment</h3>
+									<div class="row">
+										<div id="disqus_thread"></div>
+										<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-oakwave-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+										<noscript>Please enable JavaScript to view the 
+											<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+										</noscript>
+										<!-- /.col-sm-12 -->
+										<!-- /.col-sm-12 -->
+									</div>
+									<!-- /.row -->
+								</div>
+								<!-- /.col-md-8 col-md-offset-2 -->
+							</div>
+							<!-- /.row -->
+						</div>
+						<!-- /.container -->
+					</div>
+					<!-- /.comment-form -->
+			
+					<!-- /.container -->
+				</div>
+				<!-- /.comments-area -->
+			</article>
+			<!-- /.blog-single -->
+		</main>
+		<!-- /#content.content -->
+		<footer class="bg-dark main-footer pb-90" data-pgc-define="footer" data-pgc-define-name="footer">
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 lqd-column">
+						
+							<ul class="mb-20 social-icon social-icon-md">
+								<li>
+									<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-quora" aria-hidden="true"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</li>
+							</ul>
+							<p>Copyright 2020&nbsp;<span class="font-weight-bold text-white">OAKWAVE</span>. All Rights Reserved.</p>
+						</div>
+						<!-- /.col-md-3 col-sm-6 -->
+						<div class="col-md-2 col-sm-6 lqd-column">
+							<h3 class="mt-0 text-white widget-title">QUICK LINKS<br><br></h3>
+							<ul class="lqd-custom-menu reset-ul text-white">
+								<li>
+									<a href="#">Homepage</a>
+								</li>
+								<li>
+									<a href="#">Blog Home</a>
+								</li>
+								<li>
+									<a href="#">Who We Are</a>
+								</li>
+								<li>
+									<a href="#">What We Do</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-6 lqd-column">
+							<h3 class="mt-0 text-white widget-title">The Juicy Stuff<br><br></h3>
+							<ul class="lqd-custom-menu reset-ul text-white">
+								<li>
+									<a href="#">Industries Served</a>
+								</li>
+								<li>
+									<a href="#">Clients Served</a>
+								</li>
+								<li>
+									<a href="#">Services Offered</a>
+								</li>
+								<li>
+									<a href="#">Pricing</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.col-md-2 col-sm-6 -->
+						<div class="col-md-2 col-sm-6 lqd-column">
+							<h3 class="mt-0 text-white widget-title">WHY OAKWAVE  <br/><small><em>(Our 4 P's)</em></small></h3>
+							<ul class="lqd-custom-menu reset-ul text-white">
+								<li>
+									<a href="#">Products</a>
+								</li>
+								<li>
+									<a href="#">Process</a>
+								</li>
+								<li>
+									<a href="#">Philosphy</a>
+								</li>
+								<li>
+									<a href="#">People</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.col-md-2 col-sm-6 -->
+						<div class="col-md-2 col-sm-6 lqd-column">
+							<h3 class="mt-0 text-white widget-title">Resources<br><br></h3>
+							<ul class="lqd-custom-menu reset-ul text-white">
+								<li>
+									<a href="#">On Strategy</a>
+								</li>
+								<li>
+									<a href="#">On Marketing</a>
+								</li>
+								<li>
+									<a href="#">On Business</a>
+								</li>
+								<li>
+									<a href="#">Events</a>
+								</li>
+							</ul>
+						</div>
+						<!-- /.col-md-2 col-sm-6 -->
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /.container -->
+			</section>
+		</footer>
+		<!-- /.main-footer -->
+	</div>
+					{% include author_info.html %}
+
+					<!--<figure>
+						<img src="./assets/demo/avatars/avatar-2.jpg" alt="avatar">
+					</figure>-->
+				<!----	<div class="clearfix post-author-info">
+						<h3><a href="#">Nicole choman</a></h3>
+						<h6>ceo</h6>
+						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde.</p>
+					</div>-->
+					<!-- /.post-author-info -->
+				</div>
+				<!-- /.post-author -->
+				<nav class="post-nav">
+					<div class="nav-previous">
+						<a href="#" rel="prev"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+								<g>
+									<line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+									<polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+								</g>
+							</svg> <span class="screen-reader-text">Previous Article</span> <span aria-hidden="true" class="nav-subtitle">Previous Article</span> <span class="nav-title">Compare prices find the best computer accessory</span> </a>
+					</div>
+					<div class="nav-next">
+						<a href="#" rel="next"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#444" stroke-width="2" x="0px" y="0px" viewbox="0 0 24 24" xml:space="preserve" width="24" height="24">
+								<g transform="rotate(180 12,12) ">
+									<line stroke-miterlimit="10" x1="22" y1="12" x2="2" y2="12" stroke-linejoin="miter" stroke-linecap="butt"></line>
+									<polyline stroke-linecap="square" stroke-miterlimit="10" points="9,19 2,12 9,5 " stroke-linejoin="miter"></polyline>
+								</g>
+							</svg> <span class="screen-reader-text">Next Article</span> <span aria-hidden="true" class="nav-subtitle">Next Article</span> <span class="nav-title">Enhance wellness by doing something different!</span> </a>
+					</div>
+				</nav>
+				<!-- /.post-nav -->
+			</div>
+			<!-- /.col-md-8 -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	<div id="comments" class="comments-area">
+		<div id="respond" class="comment-respond filled">
+			<div class="container">
+				<div c<!-- /.row -->
+					</div>
+					<!-- /.col-md-8 col-md-offset-2 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.comment-form -->
+	</div>
+	<!-- /.comments-area -->
+</article>
+<!-- /.blog-single -->
+</main>
+<!-- /#content.content -->
+
+<!-- /.main-footer -->
+</div>

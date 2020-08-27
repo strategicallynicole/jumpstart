@@ -1,0 +1,34 @@
+
+$bg-gradient: 333.76deg, #26272B 22.72%, #34393F 89.31%;
+$light-text-on-dark-bg: #fff;
+$purple: #6c5ba7;
+$chosenone: #6c5ba7;
+$accent: $chosenone;
+$bold: 300;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
+$darkchosenone: darken(#6c5ba7, 10%);
+
+$text: #ffffff;
+
+$white: #ffffff;
+
+.white {
+    color: $white;
+}
+
+.homeslider {
+    width: 50%;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }

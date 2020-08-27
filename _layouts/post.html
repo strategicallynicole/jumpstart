@@ -1,0 +1,117 @@
+---
+layout: default.njk
+---
+
+{% include post_header.html %}
+
+
+
+
+<main id="content" class="content py-0">
+
+	<div class="blog-single-cover scheme-light bg-center" data-fullheight="true" data-inview="true"
+		data-inview-options='{ "onImagesLoaded": true }' >
+	{% include navigation.html %} <div style="height: 10px;"></div>
+		<figure class="blog-single-media" data-responsive-bg="true" data-parallax="true"
+			data-parallax-options='{ "parallaxBG": true, "triggerHook": "onLeave" }'
+			data-parallax-from='{ "translateY": "0%" }' data-parallax-to='{ "translateY": "20%" }'>
+			<img src="{{page.post_image}}" alt="{{page.title}}">
+		</figure>
+
+		<div class="blog-single-details">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<header class="entry-header blog-single-header" data-parallax="true"
+							data-parallax-to='{ "opacity": 0, "translateY": "30%" }'
+							data-parallax-options='{ "triggerHook": "0.3" }'>
+							<h1 class="blog-single-title entry-title h2" data-split-text="true"
+								data-split-options='{ "type": "lines" }'>{{page.title}}</h1>
+							<div class="post-meta">
+								<span class="byline">
+									<span class="block text-uppercase ltr-sp-1">Reading Time:</span>
+									<span class="author vcard">
+										<a class="url fn n" href="{{url}}"><i class="fad fa-clock"></i>&nbsp; &nbsp;
+											{% include read_time.html %}</a>
+									</span>
+								</span>
+								<span class="posted-on">
+									<span class="block text-uppercase ltr-sp-1">Published on:</span>
+									<a href="{{url}}" rel="bookmark">
+										<time class="entry-date published updated" datetime="{{date}}"><i
+												class="fad fa-calendar"></i>&nbsp; &nbsp; {{date}}</time>
+									</a>
+								</span>
+								<span class="cat-links">
+									<span class="block text-uppercase ltr-sp-1">Published in:</span>
+									{{#foreach tags limit="1"}}
+									<i class="fad fa-tags"></i>&nbsp;&nbsp;<a rel="category tag"
+										class="tn btn-underlined text-uppercase font-size-12 font-weight-bold ltr-sp-2 color-secondary lqd-unit-animation-done"
+										href="{{url}}">{{name}}</a>&nbsp;&nbsp;
+									{{/foreach}}
+								</span>
+							</div><!-- /.post-meta -->
+							<!--<div class="blog-single-details-extra">-->
+						</header>
+					</div><!-- /.blog-single-details-extra -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.blog-single-details -->
+	</div><!-- /.blog-single-cover -->
+	<article class="blog-single bg-white scheme-dark liquid-blog-scheme-dark">
+		<div class="container">
+			<div class="blog-single-content entry-content expanded">
+				{{{content}}}
+				<!-- /.blog-single-content entry-content -->
+	
+				<footer class="blog-single-footer entry-footer">
+					<span class="tags-links">
+						{{#foreach tags limit="all"}}
+						{{> "ui/tagslist"}}
+						{{/foreach}}
+					</span>
+				{{> "ui/sharelinks"}}
+				</footer>
+				{{#foreach authors}}
+				{{> "layout/author-box"}}
+				{{/foreach}}
+				{{> "ui/next-prev-post"}}
+				{{> "ui/disqus"}}
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</article><!-- /.blog-single -->
+</main><!-- /#content.content -->
+
+{{#contentFor "scripts"}}
+<script src="{{asset "js/theme-vendors.js"}}"></script>
+<script src="{{asset "js/theme.min.js"}}"></script>
+<script src="{{asset "built/js/extra-post.js"}}"></script>
+<script src="{{asset "js/kg-gallery.js"}}"></script>
+{{/contentFor}}
+     <img src="{{page.post_image}}" alt="{{page.title}}" />
+               </div>
+               <div class="single-content editable">
+                  {{page.content}}				
+               </div>
+               <div class="single-tags-share">
+                  <div class="single-tags list-inline float-left">
+                     <div class="list-inline-item">Tags:</div>
+                     {{page | tags }}
+                  </div>
+                  {% include social_share.html %}
+               </div>
+                 {% include author_info.html %}
+                 {% include pagination.html %}
+               <div class="comments-wrapper">
+                  {% include disqus_comments.html %}
+               </div>
+            </div>
+         </div>
+         <div class="col-md-5 col-lg-4">
+         {% include sidebar.html %}
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+

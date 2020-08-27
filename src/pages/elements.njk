@@ -1,0 +1,624 @@
+{% include 'neon/corehead.njk' %}
+
+  <body>
+    <div class="page">
+      <!--RD Navbar-->
+      <header class="section rd-navbar-wrap">
+        <nav class="rd-navbar">
+          <div class="navbar-container">
+            <div class="navbar-cell">
+              <div class="navbar-panel">
+                <button class="navbar-switch" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
+                <div class="navbar-logo"><a class="navbar-logo-link" href="index.html"><img class="navbar-logo-default" src="/assets/media/logo-default-113x30.svg" alt="Neon" width="113" height="30"/></a></div>
+              </div>
+            </div>
+            <div class="navbar-spacer"></div>
+            <div class="navbar-cell navbar-sidebar">
+              <ul class="navbar-navigation rd-navbar-nav fullpage-navigation">
+                <li class="navbar-navigation-root-item" data-menuanchor="ndex.html"><a class="navbar-navigation-root-link" href="index.html">Home</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                    <li class="navbar-navigation-back">
+                      <button class="navbar-navigation-back-btn">Back</button>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="index-2.html">Home #2</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="index-3.html">Home #3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-navigation-root-item" data-menuanchor="estimonials.html"><a class="navbar-navigation-root-link" href="testimonials.html">Testimonials</a>
+                </li>
+                <li class="navbar-navigation-root-item active" data-menuanchor="lements.html"><a class="navbar-navigation-root-link" href="elements.html">Elements</a>
+                </li>
+                <li class="navbar-navigation-root-item" data-menuanchor="pages"><a class="navbar-navigation-root-link" href="#pages">Pages</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                    <li class="navbar-navigation-back">
+                      <button class="navbar-navigation-back-btn">Back</button>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="404-page.html">404 page</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="coming-soon.html">Coming soon</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="privacy-policy.html">Privacy Policy</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="testimonials-2.html">Testimonials 2</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="single-career.html">Single career</a>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="single-post.html">Single post</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-cell">
+              <div class="navbar-subpanel">
+                <div class="navbar-subpanel-item">
+                  <button class="navbar-button navbar-info-button mdi-dots-vertical" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","class":"navbar-info-active","isolate":"[data-multi-switch]"}'></button>
+                  <div class="navbar-info">
+                    <button class="btn btn-sm" data-modal-trigger='{"target":"#modal-login"}'>Get App</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Elements-->
+      <section class="section-lg section-one-screen">
+        <div class="container">
+          <div class="tab tab-line">
+            <ul class="nav nav-line biggest">
+              <li class="nav-item" role="presentation"><a class="nav-link active show" href="#tabs-1-1" data-toggle="tab">Main Elements</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">Typography</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3" data-toggle="tab">Counters</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-4" data-toggle="tab">Icon Boxes</a></li>
+            </ul>
+            <!-- Tab panes-->
+            <div class="tab-content">
+              <div class="tab-pane fade active show" id="tabs-1-1">
+                <div class="row row-30 justify-content-lg-between">
+                  <div class="col-xl-4">
+                    <div class="row row-30 row-xl-40">
+                      <div class="col-md-6 col-xl-12">
+                        <div class="h4">Field</div>
+                        <form class="block block-sm">
+                          <div class="form-group">
+                            <label class="text-300" for="exampleInputText1">Default Field</label>
+                            <input class="form-control" id="exampleInputText1" type="text" placeholder="Your Name">
+                          </div>
+                          <div class="form-group">
+                            <label class="text-300" for="exampleInputText2">Focused Field</label>
+                            <input class="form-control" id="exampleInputText2" type="text" placeholder="Your Name">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-md-6 col-xl-12">
+                        <div class="h4">Tabs</div>
+                        <div class="tab tab-boxed block block-md">
+                          <ul class="nav nav-boxed">
+                            <li class="nav-item" role="presentation"><a class="nav-link active show" href="#tabs-2-1" data-toggle="tab">Tab #1</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-2" data-toggle="tab">Tab #2</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-2-3" data-toggle="tab">Tab #3</a></li>
+                          </ul>
+                          <!-- Tab panes-->
+                          <div class="tab-content">
+                            <div class="tab-pane fade active show" id="tabs-2-1">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-2-2">
+                              <p>Sunt ususes quaestio azureus, gratis consiliumes. Cum triticum accelerare, omnes canises carpseris alte.</p>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-2-3">
+                              <p>Fugas cadunt in bassus antverpia! Humani generiss tolerare in burdigala! Ire nunquam ducunt ad regius.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-lg-4 col-xl-3">
+                    <div class="h4">Buttons</div>
+                    <div class="group-25 offset-xs">
+                      <button class="btn">Default Button</button>
+                      <button class="btn hover">Button Hover</button>
+                      <button class="btn btn-sm">Small Button</button>
+                      <button class="btn btn-sm pr-1"><span>Button With Icon #1</span><span class="btn-icon icon icon-circle icon-xs icon-style-2 ml-xxl-5 mdi-arrow-right"></span></button>
+                      <button class="btn pl-1"><span class="btn-icon icon icon-round icon-sm icon-primary icon-style-3 mdi-apple"></span><span>Apple Store</span></button>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-md-4 col-xl-3">
+                    <div class="row row-30 row-xl-40">
+                      <div class="col-12">
+                        <div class="h4">Swipe Button</div>
+                        <div class="group-30 offset-xxs">
+                          <div class="switch-toggle-group">
+                            <div class="switch-toggle-label">1 pos</div>
+                                  <div class="switch-toggle-modern" data-multi-switch='{"targets":".switch-container-2"}'>
+                                    <div class="guide"></div>
+                                    <div class="slider">
+                                      <div class="slider-dot"></div>
+                                      <div class="slider-dot"></div>
+                                    </div>
+                                  </div>
+                          </div>
+                          <div class="switch-toggle-group">
+                            <div class="switch-toggle-label">2 pos</div>
+                                  <div class="switch-toggle-modern" data-multi-switch='{"targets":".switch-container-2","state":true}'>
+                                    <div class="guide"></div>
+                                    <div class="slider">
+                                      <div class="slider-dot"></div>
+                                      <div class="slider-dot"></div>
+                                    </div>
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="h4">Toggle</div>
+                        <div class="group-30 offset-xxs">
+                          <div class="switch-toggle-group">
+                            <div class="switch-toggle-label">1 pos</div>
+                                  <div class="switch-toggle" data-multi-switch='{"targets":".switch-container-1"}'>
+                                    <div class="guide"></div>
+                                    <div class="slider"></div>
+                                  </div>
+                          </div>
+                          <div class="switch-toggle-group">
+                            <div class="switch-toggle-label">2 pos</div>
+                                  <div class="switch-toggle" data-multi-switch='{"targets":".switch-container-1","state":true}'>
+                                    <div class="guide"></div>
+                                    <div class="slider"></div>
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="h4">Nav Buttons</div>
+                        <div class="group-15 offset-xxs">
+                          <button class="icon icon-round icon-lg icon-style-1 mdi-account hover"></button>
+                          <button class="icon icon-round icon-lg icon-style-1 mdi-account"></button>
+                          <button class="icon icon-circle icon-lg icon-style-2 mdi-account"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-md-3 col-xl-2">
+                    <div class="h4">Icon Boxes</div>
+                    <div class="group-25 offset-xs"><span class="icon icon-circle icon-lg icon-style-4 mdi-account"></span><span class="icon icon-round icon-md icon-style-3 mdi-account"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabs-1-2">
+                <div class="h4">
+                  Font:
+                  <span class="text-600">Poppins</span>
+                </div>
+                <div class="row row-30 row-md-40 align-items-end">
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h1">
+                      H1
+                      <span class="text-600">70px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h2">
+                      H2
+                      <span class="text-600">46px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h3">
+                      H3
+                      <span class="text-600">38px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h4">
+                      H4
+                      <span class="text-600">30px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h5">
+                      H5
+                      <span class="text-600">20px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <div class="col-md-6 col-xl-4">
+                    <div class="h6">
+                      H6
+                      <span class="text-600">20px</span>
+                    </div>
+                    <p class="mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <div class="row row-offset-md row-30 row-md-40">
+                  <div class="col-xs-6 col-xl-3 col-xxl-2">
+                    <div class="h4">List #1</div>
+                    <ul class="list list-marked list-secondary mt-2">
+                      <li class="list-item">32 GB Cloud Storage</li>
+                      <li class="list-item">eCommerce Integration</li>
+                      <li class="list-item">24/7 Support</li>
+                      <li class="list-item">Regular Updates</li>
+                    </ul>
+                  </div>
+                  <div class="col-xs-6 col-xl-3 col-xxl-2">
+                    <div class="h4">List #2</div>
+                    <ul class="list list-marked-check list-secondary mt-2">
+                      <li class="list-item">32 GB Cloud Storage</li>
+                      <li class="list-item">eCommerce Integration</li>
+                      <li class="list-item">24/7 Support</li>
+                      <li class="list-item">Regular Updates</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-6 col-xxl-8">
+                    <div class="h4">Paragraphs</div>
+                    <p>
+                      Welcome to our wonderful world.
+                      <b>This is a bold text</b>
+                      
+                      <mark>This is a highlighted text</mark>
+                      We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login
+                      <span class="text-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltips</span> widgets,
+                      you will definitely have a great experience of using our web page.
+                      
+                      <s>This is a strikethrough text</s>,
+                      
+                      <u>This is an underlined text</u>.
+                      <span class="link-hover">Link Hover</span>
+                      <span class="link-press">Link Press</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade text-center" id="tabs-1-3">
+                <h4>Counters</h4>
+                <div class="row row-30 justify-content-lg-center mt-3">
+                  <div class="col-6 col-sm-4 col-lg-3 col-xxl-2">
+                          <!-- Counter-->
+                          <article class="counter block block-xxs block-center">
+                            <div class="counter-content">
+                              <div class="counter-value h3"><span data-counter>453</span>
+                              </div>
+                              <div class="counter-divider">
+                                <hr class="divider">
+                              </div>
+                              <div class="counter-title bigger">Projects</div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-6 col-sm-4 col-lg-3 col-xxl-2">
+                          <!-- Counter-->
+                          <article class="counter block block-xxs block-center">
+                            <div class="counter-content">
+                              <div class="counter-value h3"><span data-counter>100</span><span class="counter-postfix">%</span>
+                              </div>
+                              <div class="counter-divider">
+                                <hr class="divider">
+                              </div>
+                              <div class="counter-title bigger">Projects</div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-6 col-sm-4 col-lg-3 col-xxl-2">
+                          <!-- Counter-->
+                          <article class="counter block block-xxs block-center">
+                            <div class="counter-content">
+                              <div class="counter-value h3"><span data-counter>34</span><span class="counter-postfix">k</span>
+                              </div>
+                              <div class="counter-divider">
+                                <hr class="divider">
+                              </div>
+                              <div class="counter-title bigger">Projects</div>
+                            </div>
+                          </article>
+                  </div>
+                </div>
+                <div class="offset-xl">
+                  <h4>Timer</h4>
+                        <!-- Countdown-->
+                        <div class="countdown justify-content-center" data-countdown='{"to":"2020-12-31"}'>
+                          <div class="countdown-block countdown-block-days">
+                            <svg class="countdown-circle" x="0" y="0" width="124" height="124" viewbox="0 0 124 124" data-progress-days>
+                              <g filter="url(#filter0_di0)">
+                                <circle class="bg" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <g filter="url(#filter1_d0)">
+                                <circle class="fg clipped" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <defs>
+                                <filter id="filter0_di0" x="6" y="4" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.254902 0 0 0 0 0.266667 0 0 0 0.81 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecomposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></fecomposite>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.105882 0 0 0 0 0.121569 0 0 0 1 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="shape" result="effect2_innerShadow"></feblend>
+                                </filter>
+                                <filter id="filter1_d0" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dy="2"></feoffset>
+                                  <fegaussianblur stdDeviation="3"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.470588 0 0 0 0 0.772549 0 0 0 0 0.839216 0 0 0 0.2 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                </filter>
+                              </defs>
+                            </svg>
+                            <div class="countdown-inner">
+                              <div class="countdown-counter h4" data-counter-days>00</div>
+                              <div class="countdown-title">days</div>
+                            </div>
+                          </div>
+                          <div class="countdown-block countdown-block-hours">
+                            <svg class="countdown-circle" x="0" y="0" width="124" height="124" viewbox="0 0 124 124" data-progress-hours>
+                              <g filter="url(#filter0_di1)">
+                                <circle class="bg" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <g filter="url(#filter1_d1)">
+                                <circle class="fg clipped" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <defs>
+                                <filter id="filter0_di1" x="6" y="4" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.254902 0 0 0 0 0.266667 0 0 0 0.81 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecomposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></fecomposite>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.105882 0 0 0 0 0.121569 0 0 0 1 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="shape" result="effect2_innerShadow"></feblend>
+                                </filter>
+                                <filter id="filter1_d1" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dy="2"></feoffset>
+                                  <fegaussianblur stdDeviation="3"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.470588 0 0 0 0 0.772549 0 0 0 0 0.839216 0 0 0 0.2 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                </filter>
+                              </defs>
+                            </svg>
+                            <div class="countdown-inner">
+                              <div class="countdown-counter h4" data-counter-hours>00</div>
+                              <div class="countdown-title">hours</div>
+                            </div>
+                          </div>
+                          <div class="countdown-block countdown-block-minutes">
+                            <svg class="countdown-circle" x="0" y="0" width="124" height="124" viewbox="0 0 124 124" data-progress-minutes>
+                              <g filter="url(#filter0_di2)">
+                                <circle class="bg" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <g filter="url(#filter1_d2)">
+                                <circle class="fg clipped" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <defs>
+                                <filter id="filter0_di2" x="6" y="4" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.254902 0 0 0 0 0.266667 0 0 0 0.81 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecomposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></fecomposite>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.105882 0 0 0 0 0.121569 0 0 0 1 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="shape" result="effect2_innerShadow"></feblend>
+                                </filter>
+                                <filter id="filter1_d2" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dy="2"></feoffset>
+                                  <fegaussianblur stdDeviation="3"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.470588 0 0 0 0 0.772549 0 0 0 0 0.839216 0 0 0 0.2 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                </filter>
+                              </defs>
+                            </svg>
+                            <div class="countdown-inner">
+                              <div class="countdown-counter h4" data-counter-minutes>00</div>
+                              <div class="countdown-title">minutes</div>
+                            </div>
+                          </div>
+                          <div class="countdown-block countdown-block-seconds">
+                            <svg class="countdown-circle" x="0" y="0" width="124" height="124" viewbox="0 0 124 124" data-progress-seconds>
+                              <g filter="url(#filter0_di3)">
+                                <circle class="bg" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <g filter="url(#filter1_d3)">
+                                <circle class="fg clipped" cx="62" cy="60" r="54"></circle>
+                              </g>
+                              <defs>
+                                <filter id="filter0_di3" x="6" y="4" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.254902 0 0 0 0 0.266667 0 0 0 0.81 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix>
+                                  <feoffset dx="1" dy="1"></feoffset>
+                                  <fegaussianblur stdDeviation="0.5"></fegaussianblur>
+                                  <fecomposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></fecomposite>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.105882 0 0 0 0 0.121569 0 0 0 1 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="shape" result="effect2_innerShadow"></feblend>
+                                </filter>
+                                <filter id="filter1_d3" x="0" y="0" width="124" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                                  <fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+                                  <feoffset dy="2"></feoffset>
+                                  <fegaussianblur stdDeviation="3"></fegaussianblur>
+                                  <fecolormatrix type="matrix" values="0 0 0 0 0.470588 0 0 0 0 0.772549 0 0 0 0 0.839216 0 0 0 0.2 0"></fecolormatrix>
+                                  <feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+                                  <feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+                                </filter>
+                              </defs>
+                            </svg>
+                            <div class="countdown-inner">
+                              <div class="countdown-counter h4" data-counter-seconds>00</div>
+                              <div class="countdown-title">seconds</div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tabs-1-4">
+                <div class="row row-30 justify-content-center">
+                  <div class="col-sm-6 col-lg-3 col-xxl-2">
+                          <!-- Blurb boxed-->
+                          <article class="blurb blurb-boxed">
+                            <div class="media media-sm flex-column">
+                              <div class="media-left">
+                                <div class="blurb-embed"><span class="icon icon-round icon-md icon-secondary icon-style-3 mdi-cursor-default"></span></div>
+                              </div>
+                              <div class="media-body">
+                                <div class="blurb-title h5">Easy Customize</div>
+                                <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</div>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6 col-lg-3 col-xxl-2">
+                          <!-- Blurb boxed-->
+                          <article class="blurb blurb-boxed">
+                            <div class="media media-sm flex-column">
+                              <div class="media-left">
+                                <div class="blurb-embed"><span class="icon icon-round icon-md icon-primary icon-style-3 mdi-dice"></span></div>
+                              </div>
+                              <div class="media-body">
+                                <div class="blurb-title h5">Different Layouts</div>
+                                <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</div>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6 col-lg-3 col-xxl-2">
+                          <!-- Blurb boxed-->
+                          <article class="blurb blurb-boxed">
+                            <div class="media media-sm flex-column">
+                              <div class="media-left">
+                                <div class="blurb-embed"><span class="icon icon-round icon-md icon-success icon-style-3 mdi-comment"></span></div>
+                              </div>
+                              <div class="media-body">
+                                <div class="blurb-title h5">Friendly Support</div>
+                                <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</div>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6 col-lg-3 col-xxl-2">
+                          <!-- Blurb boxed-->
+                          <article class="blurb blurb-boxed">
+                            <div class="media media-sm flex-column">
+                              <div class="media-left">
+                                <div class="blurb-embed"><span class="icon icon-round icon-md icon-primary icon-style-3 mdi-reload"></span></div>
+                              </div>
+                              <div class="media-body">
+                                <div class="blurb-title h5">Free Update</div>
+                                <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</div>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                </div>
+                <div class="row row-offset-lg row-30 justify-content-xxl-center">
+                  <div class="col-sm-6 col-lg-4 col-xxl-3 offset-xxl-1">
+                          <!-- Blurb-->
+                          <article class="blurb mr-xxl-1">
+                            <div class="blurb-header">
+                              <div class="blurb-embed"><span class="icon icon-circle icon-lg icon-style-4 mdi-reload"></span></div>
+                              <div class="blurb-title h5">Free Update</div>
+                            </div>
+                            <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xxl-3">
+                          <!-- Blurb-->
+                          <article class="blurb mr-xxl-1">
+                            <div class="blurb-header">
+                              <div class="blurb-embed"><span class="icon icon-circle icon-lg icon-style-4 mdi-cursor-default"></span></div>
+                              <div class="blurb-title h5">Easy Customize</div>
+                            </div>
+                            <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xxl-3">
+                          <!-- Blurb-->
+                          <article class="blurb mr-xxl-1">
+                            <div class="blurb-header">
+                              <div class="blurb-embed"><span class="icon icon-circle icon-lg icon-style-4 mdi-comment"></span></div>
+                              <div class="blurb-title h5">Friendly Support</div>
+                            </div>
+                            <div class="blurb-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+                          </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal-->
+      <div class="modal fade" id="modal-login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <h3>Log In</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <form class="rd-mailform">
+                <div class="form-group">
+                  <input class="form-control" type="text" name="name" placeholder="Your name *" data-constraints="@Required">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="password" name="password" placeholder="Password *" data-constraints="@Required">
+                </div>
+                <div class="offset-xxs group-40 d-flex flex-wrap flex-xs-nowrap align-items-center">
+                  <button class="btn btn-block" type="submit">Log in</button>
+                </div>
+              </form>
+            </div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader-->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-dot"></div>
+        <div class="preloader-dot"></div>
+        <div class="preloader-dot"></div>
+        <div class="preloader-dot"></div>
+      </div>
+    </div>
+  </body>
+</html>

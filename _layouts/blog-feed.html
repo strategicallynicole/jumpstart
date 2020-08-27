@@ -1,0 +1,52 @@
+---
+permalink: "/blog/"
+layout: default.njk
+bodyclass: blog blog-scheme-light
+headerclass: main-header main-header-overlay
+mainclass: content bg-dark py-0"
+cssfile: "/themes/original.css"
+fontawesome: true
+home: false
+---
+
+	<div id="wrap">
+
+	{% include titlebar.html %}
+	
+		<main id="content" class="content">
+            {% include particles.html %}
+
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-8">
+
+						<div class="liquid-blog-posts scheme-light">
+							<div class="liquid-blog-grid liquid-blog-style-classic row">
+
+							
+							
+							
+							
+							
+								{% for posts in site.posts limit:"3" %}
+								  {% include post-card.html %}
+							  {% endfor %}
+											
+										
+
+
+
+
+							</div><!-- /.liquid-blog-grid liquid-blog-style-classic row -->
+						</div><!-- /.liquid-blog-posts -->
+
+					</div><!-- /.col-md-8 -->
+					{% include layout/sidebar.html %}
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			
+		</main><!-- /#content.content -->
+		
+

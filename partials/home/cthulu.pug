@@ -1,0 +1,152 @@
+main#content.content.bg-vulcan(data-liquid-stack='true' data-stack-options='{"navigation":false,"prevNextButtons":false,"pageNumber":true,"prevNextLabels":{"prev":"Previous","next":"Next"},"effect":"fadeScale", "disableOnMobile": false}')
+  section.vc_row.fullheight.d-flex.flex-wrap.align-items-center.py-5.py-md-0.bg-dark
+    .container
+      .row
+        .lqd-column.col-lg-10
+          .lqd-promo-wrap.text-white
+            .lqd-promo-inner
+              | {% include promo-message.html %}
+              | {% include dynamic-shape.html %}
+              .lqd-promo-img
+                div
+                  picture
+                    source(srcset='{{ site.baseurl }}/assets/img/renderings/cthulu.webp' type='image/webp')
+                    img.img-fluid.metalpurple(src='{{ site.baseurl }}/assets/img/renderings/cthulu.png' alt='OAKwave marketing strategy')
+                // /.lqd-promo-img-inner
+              // /.lqd-promo-img
+              .lqd-promo-content(data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": ".btn", "duration": 400, "startDelay": 0, "initValues": { "translateY": 70, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }')
+                h2.text-white.less-room(data-split-text='false' data-split-options='{ "none": "chars, words" }' data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 400, "startDelay": 0, "delay": 0, "initValues": { "translateX": 70, "rotateY": 65, "opacity": 0 }, "animations": { "translateX": 0, "rotateY": 0, "opacity": 1 } }' style='font-size: xx-large;')
+                  | We 
+                  span.purplish(style='color: #b8a2e3') need
+                  |  to talk.
+                br
+                p.less-room(style="font-family: 'Noto Sans';" data-split-text='true' data-split-options='{ "type": "lines" }' data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 400, "startDelay": 0, "delay": 0, "initValues": { "translateY": 50, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }')
+                  | It&apos;s about your marketing and sales strategy again... It&apos;s been... underwhelming.
+                p.less-room.hidden-md-down
+                  a.btn.btn-default.text-uppercase.btn-md.circle.hidden-md-down.btn-bordered.border-thin.font-size-10.lh-12.font-weight-bold.ltr-sp-05.mb-2(href='#Section-2')
+                    span
+                      span.btn-txt
+                        | Your curiosity compels you. 
+                        i.fas.fa-arrow-circle-right
+                      br
+                  a.btn.btn-default.text-uppercase.btn-md.hidden-md-down.circle.btn-bordered.border-thin.font-size-10.lh-12.font-weight-bold.ltr-sp-05.mb-2(href='#Section-2')
+                    span
+                      span.btn-txt
+                        | Your skepticism deters you. 
+                        i.fas.fa-arrow-circle-right
+                      br
+              // /.lqd-promo-content
+            // /.lqd-promo-inner
+          // /.lqd-promo-wrap
+        // /.col-md-8 col-md-offset-2
+      // /.row
+    // /.container
+  | =======
+  a(name='Section-1')
+  section.vc_row.fullheight.d-flex.flex-wrap.align-items-center.py-5.py-md-0.bg-dark.pp-scrollable.pp-section.active(data-anchor='Section-1' style='z-index: 5;')
+    .lqd-stack-section-inner
+      .container
+        .row
+          .lqd-column.col-lg-12
+            .lqd-promo-wrap.lqd-promo.text-white
+              .lqd-promo-inner
+                .lqd-promo-dynamic-shape(width='100%' style='width: 100% !important;' data-dynamic-shape='true')
+                  svg.scene(width='100%' height='100%' fill='rgba(162, 163, 187, 0.05)' viewbox='0 0 650 650')
+                    path(d='\
+                    M566.6735419984576,489.95195895958966 C553.2607208813729,612.5766893989542 449.3628801036778,708 323.1648357591407,708 C205.79988010367782,708 107.72871341447706,625.4643106010459 83.78454199845763,515.2760410404103 C32.50219892209836,470.6839604634043 0,404.81804525726125 0,331.3503800574023 C0,196.04038005740227 109.69,86.35038005740229 245,86.35038005740229 C282.98295608621265,86.35038005740229 318.9139294696264,95.10857433189999 350.85603193830474,110.6489925331041 C394.5529294696264,44.39342566810001 469.6619560862126,0.6496199425977096 555,0.6496199425977096 C690.31,0.6496199425977096 800,110.33961994259771 800,245.64961994259772 C800,376.98795474273874 696.4961989220983,484.1360320696998 566.6735419984576,489.95195895958966 Z' pathdata:id='\
+                    M717.349,515.468 C693.326,625.562 595.298,708.000 478.000,708.000 C351.735,708.000 247.793,612.479 234.460,489.760 C104.042,484.237 -0.000,376.777 -0.000,245.000 C-0.000,109.690 109.690,-0.000 245.000,-0.000 C330.697,-0.000 406.103,44.009 449.889,110.648 C481.742,95.493 517.376,87.000 555.000,87.000 C690.310,87.000 800.000,196.690 800.000,332.000 C800.000,405.029 768.036,470.582 717.349,515.468 Z;\
+                    M565.540,489.760 C552.207,612.479 448.265,708.000 322.000,708.000 C204.702,708.000 106.675,625.562 82.651,515.468 C31.964,470.582 -0.000,405.029 -0.000,332.000 C-0.000,196.690 109.690,87.000 245.000,87.000 C282.624,87.000 318.258,95.493 350.111,110.649 C393.897,44.009 469.303,0.000 555.000,0.000 C690.310,0.000 800.000,109.690 800.000,245.000 C800.000,376.777 695.958,484.238 565.540,489.760 Z;\
+                    M565.540,489.760 C552.207,612.479 448.265,708.000 322.000,708.000 C204.702,708.000 106.675,625.562 82.651,515.468 C31.964,470.582 -0.000,405.029 -0.000,332.000 C-0.000,196.690 109.690,87.000 245.000,87.000 C282.624,87.000 318.258,95.493 350.111,110.649 C393.897,44.009 469.303,0.000 555.000,0.000 C690.310,0.000 800.000,109.690 800.000,245.000 C800.000,376.777 695.958,484.238 565.540,489.760 Z')
+                // /.lqd-promo-dynamic-shape
+                .lqd-promo-cat
+                  ul.reset-ul
+                    li &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    li taming businesss &amp; marketing monsters
+                // /.lqd-promo-cat
+                .lqd-promo-img
+                  div
+                    picture
+                      source(srcset='/assets/img/renderings/cthulu.webp?v=bba9c5a0a1' type='image/webp')
+                      img.img-fluid.metalpurple(width='700' src='/assets/img/renderings/cthulu.png?v=bba9c5a0a1' alt='OAKwave marketing strategy')
+                  // /.lqd-promo-img-inner
+                // /.lqd-promo-img
+                .lqd-promo-content.ca-initvalues-applied.lqd-animations-done(data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": ".btn", "duration": 500, "startDelay": 0, "initValues": { "translateY": 70, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }')
+                  h2.text-white.font-smallish.ca-initvalues-applied.perspective.lqd-animations-done.split-text-applied(data-split-text='true' data-split-options='{ "type": "chars, words" }' data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 500, "startDelay": 0, "delay": 0, "initValues": { "translateX": 70, "rotateY": 65, "opacity": 0 }, "animations": { "translateX": 0, "rotateY": 0, "opacity": 1 } }' style='font-size: xx-large')
+                    .lqd-words.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                      span.split-inner(data-text='We')
+                        span.split-txt
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='W')
+                              span.split-txt W
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='e')
+                              span.split-txt e
+                    span.purplish(style='color: #b8a2e3')
+                      .lqd-words.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                        span.split-inner(data-text='need')
+                          span.split-txt
+                            .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                              span.split-inner(data-text='n')
+                                span.split-txt n
+                            .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                              span.split-inner(data-text='e')
+                                span.split-txt e
+                            .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                              span.split-inner(data-text='e')
+                                span.split-txt e
+                            .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                              span.split-inner(data-text='d')
+                                span.split-txt d
+                    .lqd-words.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                      span.split-inner(data-text=' to')
+                        span.split-txt
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='t')
+                              span.split-txt t
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='o')
+                              span.split-txt o
+                    .lqd-words.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                      span.split-inner(data-text='talk.')
+                        span.split-txt
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='t')
+                              span.split-txt t
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='a')
+                              span.split-txt a
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='l')
+                              span.split-txt l
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='k')
+                              span.split-txt k
+                          .lqd-chars.split-unit.lqd-unit-animation-done(style='position:relative;display:inline-block;')
+                            span.split-inner(data-text='.')
+                              span.split-txt .
+                  br
+                  p.less-room.ca-initvalues-applied.lqd-animations-done.split-text-applied(style='font-family: "Noto Sans";' data-split-text='true' data-split-options='{ "type": "lines" }' data-custom-animations='true' data-ca-options='{ "triggerHandler": "inview", "animationTarget": "all-childs", "duration": 400, "startDelay": 0, "delay": 0, "initValues": { "translateY": 50, "opacity": 0 }, "animations": { "translateY": 0, "opacity": 1 } }')
+                    .lqd-lines.split-unit.lqd-unit-animation-done(style='display: block; text-align: start; position: relative;')
+                      span.split-inner(data-text="It's about your marketing and sales strategy ")
+                        span.split-txt It&apos;s about your marketing and sales strategy 
+                    .lqd-lines.split-unit.lqd-unit-animation-done(style='display: block; text-align: start; position: relative;')
+                      span.split-inner(data-text="again... It's been... underwhelming. ")
+                        span.split-txt again... It&apos;s been... underwhelming. 
+                  p.less-room.d-sm-none.d-md-block
+                    a.btn.btn-underlined.text-uppercase.font-size-12.font-weight-bold.ltr-sp-2.text-white.white.text-hover-primary.lqd-unit-animation-done(href='#Section-2' style='opacity: 1;')
+                      span
+                        span.btn-txt.white
+                          | Your curiosity compels you 
+                          i.fas.fa-arrow-circle-right(aria-hidden='true')
+                    a.btn.btn-underlined.text-uppercase.font-size-12.font-weight-bold.ltr-sp-2.text-white.white.text-hover-primary.lqd-unit-animation-done(href='https://www.oakwave.com/about' style='opacity: 1;')
+                      span
+                        span.btn-txt.white
+                          | Skip this overview 
+                          i.fas.fa-arrow-circle-right(aria-hidden='true')
+                // /.lqd-promo-content
+              // /.lqd-promo-inner
+            // /.lqd-promo-wrap
+          // /.col-md-8 col-md-offset-2
+        // /.row
+      // /.container
+  | &gt;&gt;&gt;&gt;&gt;&gt;&gt; c419825071144254fd6554119dccbfc04e64870b

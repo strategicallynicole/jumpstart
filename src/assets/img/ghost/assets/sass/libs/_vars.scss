@@ -1,0 +1,66 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000,
+		max-features:		20,
+		max-sidebar-links:	20
+	);
+
+// Duration.
+	$duration: (
+		transition:			0.2s,
+		activation:			1s
+	);
+
+// Size.
+	$size: (
+		border-radius:		0.25em,
+		border-width:		1px,
+		element-height:		2.75em,
+		element-margin:		2em,
+		sidebar-width:		18em,
+		sidebar-height:		3.5em,	// when <=large is active
+		inner-width:		75em
+	);
+	
+// Font.
+	$font: (
+		family:					('Proxima Nova, sans-serif'),
+		family-fixed:			('Proxima Nova, sans-serif'),
+		weight:					400,
+		weight-bold:			700,
+		kerning-alt:			0.25em,
+		headerfamily:			('Josefin Sans', sans-serif),
+		headerweight:			300,
+		headerweight-bold:		500,
+		headerkerning-alt:		0.25em,
+		buttonfamily:			('Josefin Sans', sans-serif),
+		buttonweight:			normal,
+		buttonweight-bold:		700,
+		buttonkerning-alt:		1
+	);
+	
+	
+// Palette.
+	$palette: (
+		deep:				#341B50,
+		bg:					#6A3C98,
+		bg-alt:				#261c3e,
+		fg:					rgba(255,255,255,0.55),
+		fg-bold:			#ffffff,
+		fg-light:			rgba(255,255,255,0.35),
+		border:				rgba(255,255,255,0.15),
+		border-bg:			rgba(255,255,255,0.05),
+		accent1:			#5f2d78,
+		accent1-alt:		#5f2d78,
+		accent2:			#563a82,
+		accent2-alt:		#6c5ba7,
+		accent3:			#6A3C98,
+		accent3-alt:		darken(#8A51C3, 10),
+		orange:				#EB8B23,
+		red:				#E34256,
+		pink:				#AF206E,
+		gradient1:			#EB8B23, 
+		gradient2:			#E34256, 
+		gradient3:			#AF206E,
+		icons:				#2e1a47
+	);

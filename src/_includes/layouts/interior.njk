@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="no-js">
+    <head>
+        <title>
+            {%- if title -%}
+                {{ title }} – {{ site.title }}
+            {%- else -%}
+                {{ site.title }} – {{ site.description }}
+            {%- endif -%}
+        </title>
+        <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+        <meta name="robots" content="index,follow">
+        <meta name="generator" content="Eleventy">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% if site.icon %}
+            <link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>
+        {% endif %}
+
+        {%- block seo -%}
+            <!--Twitter Card-->
+            <meta name="twitter:site" content="{{ site.twitter }}">
+            <meta name="twitter:creator" content="{{ site.twitter }}">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:url" content="{{ site.url + page.url }}">
+            <meta name="twitter:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta name="twitter:description" content="{{ site.description }}">
+            <meta name="twitter:image" content="{{ site.cover_image }}">
+
+            <!--Schema-->
+            <link rel="author" href="{{ site.url }}">
+            <link rel="publisher" href="{{ site.url }}">
+            <meta itemprop="name" content="{{ title + " – " + site.title if title else title }}">
+            <meta itemprop="description" content="{{ site.description }}">
+            <meta itemprop="image" content="{{ site.cover_image }}">
+
+            <!-- Facebook OpenGraph -->
+            <meta property="og:url" content="{{site.url + page.url}}">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="{{ title + " – " + site.title if title else title }}">
+            <meta property="og:image" content="{{ site.cover_image }}">
+            <meta property="og:description" content="{{ site.description }}">
+            <meta property="og:site_name" content="{{ site.title }}">
+            <meta property="og:locale" content="{{ site.lang }}">
+            <meta property="article:author" content="{{ site.url }}">
+        {%- endblock -%}
+   
+        {% set css %}{% include "css/style.css" %}{% include "css/main.css" %}{% endset %}
+        <style>{{ css | cssmin | safe }}</style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    
+
+        <script>document.documentElement.classList.remove('no-js');</script>
+
+        {{ site.codeinjection_head | safe if site.codeinjection_head }}
+        {{ codeinjection_head | safe if codeinjection_head }}
+    </head>
+<body>
+	<div class="wrapper">
+
+		<section class="section-about">
+			<div class="section__decoration section__decoration--1">
+				<img src="assets/images/temp/ball-1@2x.png" alt="" width="173" height="218">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--2">
+				<img src="assets/images/temp/ball-2@2x.png" alt="" width="145" height="122">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--3">
+				<img src="assets/images/temp/ball-3@2x.png" alt="" width="325" height="304">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--4">
+				<img src="assets/images/temp/ball-4@2x.png" alt="" width="218" height="218">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--5">
+				<img src="assets/images/temp/ball-5@2x.png" alt="" width="84" height="84">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--6">
+				<img src="assets/images/temp/ball-6@2x.png" alt="" width="207" height="207">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--7">
+				<img src="assets/images/temp/ball-7@2x.png" alt="" width="258" height="215">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--8">
+				<img src="assets/images/temp/ball-8@2x.png" alt="" width="116" height="116">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--9">
+				<img src="assets/images/temp/ball-9@2x.png" alt="" width="206" height="207">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--10">
+				<img src="assets/images/temp/ball-10@2x.png" alt="" width="145" height="122">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--11">
+				<img src="assets/images/temp/ball-11@2x.png" alt="" width="325" height="304">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--12">
+				<img src="assets/images/temp/ball-12@2x.png" alt="" width="377" height="420">
+			</div><!-- /.section__decoration -->
+
+			<div class="section__decoration section__decoration--13">
+				<img src="assets/images/temp/ball-13@2x.png" alt="" width="124" height="124">
+			</div><!-- /.section__decoration -->
+
+			<div class="shell">
+				<div class="section__outer">
+					<div class="section__aside">
+						<div class="bar bar--alt">
+							<div class="bar__inner">
+								<a href="#" class="logo">
+									<img src="assets/images/logo.svg" alt="">
+								</a>
+
+								<a href="#" class="nav-trigger js-nav-trigger">
+									<div class="nav-trigger__icon">
+										  <span></span>
+
+										  <span></span>
+									</div>
+								</a>
+
+								<nav class="nav js-nav">
+									<ul>
+										<li class="active">
+											<a href="#">
+												<span class="nav__icon">
+													<span class="nav__icon-inner">
+														<svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M33.8515 12.8847L30.2225 9.98494V4.21815C30.2225 4.09383 30.1727 3.9746 30.0842 3.88669C29.9956 3.79878 29.8755 3.7494 29.7503 3.7494H28.8058C28.6806 3.7494 28.5605 3.79878 28.4719 3.88669C28.3833 3.9746 28.3336 4.09383 28.3336 4.21815V8.47205L18.3343 0.468146C17.9572 0.164271 17.4863 -0.00158691 17.0006 -0.00158691C16.5148 -0.00158691 16.0439 0.164271 15.6668 0.468146L0.149597 12.8847C0.108605 12.9172 0.0745234 12.9575 0.0493315 13.0032C0.0241397 13.0488 0.00833926 13.099 0.00284767 13.1508C-0.00264392 13.2026 0.00228271 13.255 0.0173415 13.3048C0.0324003 13.3547 0.0572913 13.4011 0.0905693 13.4414L0.928764 14.4668C0.962073 14.5076 1.00316 14.5415 1.04968 14.5665C1.0962 14.5916 1.14723 14.6073 1.19986 14.6127C1.25249 14.6181 1.30569 14.6132 1.3564 14.5982C1.40712 14.5833 1.45436 14.5585 1.49543 14.5254L3.77803 12.6978V29.0619C3.77803 29.3105 3.87754 29.549 4.05466 29.7248C4.23177 29.9006 4.472 29.9994 4.72248 29.9994H29.278C29.5285 29.9994 29.7687 29.9006 29.9459 29.7248C30.123 29.549 30.2225 29.3105 30.2225 29.0619V12.7037L32.5128 14.5371C32.5958 14.6038 32.7021 14.6352 32.8083 14.6242C32.9145 14.6132 33.0121 14.5608 33.0794 14.4785L33.917 13.4531C33.9808 13.3678 34.0096 13.2616 33.9974 13.1561C33.9853 13.0505 33.9331 12.9535 33.8515 12.8847V12.8847ZM19.8336 28.1244H14.1669V18.7494H19.8336V28.1244ZM28.3336 28.1244H21.7225V17.8119C21.7225 17.5633 21.623 17.3248 21.4459 17.149C21.2687 16.9732 21.0285 16.8744 20.778 16.8744H13.2225C12.972 16.8744 12.7318 16.9732 12.5547 17.149C12.3775 17.3248 12.278 17.5633 12.278 17.8119V28.1244H5.66692V11.1861L16.747 2.31502C16.817 2.25819 16.9046 2.22713 16.9949 2.22713C17.0853 2.22713 17.1729 2.25819 17.2429 2.31502L28.3336 11.1908V28.1244Z" stroke="url(#paint0_linear)" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+															<defs>
+															<linearGradient id="paint0_linear" x1="34.0002" y1="32.7268" x2="0.989623" y2="2.99157" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#121212"/>
+															<stop offset="0.234375" stop-color="#212121"/>
+															<stop offset="0.442708" stop-color="#333333"/>
+															<stop offset="0.682292" stop-color="#212121"/>
+															<stop offset="1" stop-color="#121212"/>
+															</linearGradient>
+															</defs>
+														</svg>
+													</span>
+												</span>
+
+												<p class="hidden-xs">Home</p>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<span class="nav__icon">
+													<span class="nav__icon-inner">
+														<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M21 41.8359C20.2782 41.8359 13.9781 41.7703 13.9781 39.5391C13.9781 37.3078 20.2782 37.2422 21 37.2422C21.7219 37.2422 28.0219 37.3078 28.0219 39.5391C28.0219 41.7703 21.7219 41.8359 21 41.8359ZM15.3563 39.5391C15.8156 39.9328 17.8828 40.5234 21 40.5234C24.15 40.5234 26.1844 39.9328 26.6438 39.5391C26.1844 39.1453 24.1172 38.5547 21 38.5547C17.85 38.5547 15.8156 39.1453 15.3563 39.5391Z" fill="white" fill-opacity="0.35"/>
+															<path d="M21 35.3063C10.6313 35.3063 2.23126 26.8734 2.23126 16.5375C2.23126 16.1766 2.52657 15.8813 2.88751 15.8813H5.31564C5.67657 15.8813 5.97189 16.1766 5.97189 16.5375C5.97189 16.8984 5.67657 17.1938 5.31564 17.1938H3.54376C3.9047 26.5125 11.5828 33.9938 21 33.9938C30.4172 33.9938 38.1281 26.5125 38.4563 17.1938H36.6844C36.3234 17.1938 36.0281 16.8984 36.0281 16.5375C36.0281 16.1766 36.3234 15.8813 36.6844 15.8813H39.1125C39.4734 15.8813 39.7688 16.1766 39.7688 16.5375C39.7688 26.8734 31.3688 35.3063 21 35.3063Z" fill="white" fill-opacity="0.35"/>
+															<path d="M21 32.8453C11.9766 32.8453 4.65936 25.5281 4.65936 16.5047C4.65936 7.48125 11.9766 0.164062 21 0.164062C30.0234 0.164062 37.3406 7.48125 37.3406 16.5047C37.3406 25.5281 30.0234 32.8453 21 32.8453ZM21 1.47656C12.6984 1.47656 5.97186 8.23594 5.97186 16.5047C5.97186 24.7734 12.6984 31.5328 21 31.5328C29.3015 31.5328 36.0281 24.7734 36.0281 16.5047C36.0281 8.23594 29.3015 1.47656 21 1.47656Z" fill="white" fill-opacity="0.35"/>
+															<path d="M21 29.0063C14.1094 29.0063 8.49847 23.3953 8.49847 16.5047C8.49847 9.61406 14.1094 4.00313 21 4.00313C27.8907 4.00313 33.5016 9.61406 33.5016 16.5047C33.5016 23.3953 27.8907 29.0063 21 29.0063ZM21 4.65938C14.4703 4.65938 9.15472 9.975 9.15472 16.5047C9.15472 23.0344 14.4703 28.35 21 28.35C27.5297 28.35 32.8453 23.0344 32.8453 16.5047C32.8453 9.975 27.5297 4.65938 21 4.65938Z" fill="white" fill-opacity="0.35"/>
+															<path d="M21 40.3266C20.6391 40.3266 20.3438 40.0312 20.3438 39.6703V34.65C20.3438 34.2891 20.6391 33.9937 21 33.9937C21.3609 33.9937 21.6562 34.2891 21.6562 34.65V39.6703C21.6562 40.0312 21.3609 40.3266 21 40.3266Z" fill="white" fill-opacity="0.35"/>
+															<path d="M14.4375 17.5875C14.3391 17.5875 14.2734 17.5547 14.2078 17.4891C14.0766 17.3578 14.0766 17.1609 14.2078 17.0297L21.525 9.7125C21.6562 9.58125 21.8531 9.58125 21.9844 9.7125C22.1156 9.84375 22.1156 10.0406 21.9844 10.1719L14.6672 17.5219C14.6016 17.5547 14.5031 17.5875 14.4375 17.5875Z" fill="white" fill-opacity="0.35"/>
+															<path d="M15.061 22.7719C14.9625 22.7719 14.8969 22.7391 14.8313 22.6734C14.7 22.5422 14.7 22.3453 14.8313 22.2141L26.7094 10.3359C26.8407 10.2047 27.0375 10.2047 27.1688 10.3359C27.3 10.4672 27.3 10.6641 27.1688 10.7953L15.2907 22.6734C15.225 22.7391 15.1594 22.7719 15.061 22.7719Z" fill="white" fill-opacity="0.35"/>
+															<path d="M20.2453 23.3953C20.1469 23.3953 20.0812 23.3625 20.0156 23.2969C19.8844 23.1656 19.8844 22.9687 20.0156 22.8375L27.3328 15.5203C27.4641 15.3891 27.6609 15.3891 27.7922 15.5203C27.9234 15.6516 27.9234 15.8484 27.7922 15.9797L20.475 23.2969C20.4094 23.3625 20.3109 23.3953 20.2453 23.3953Z" fill="white" fill-opacity="0.35"/>
+														</svg>
+													</span>
+												</span>
+
+												<p class="hidden-xs">About</p>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<span class="nav__icon">
+													<span class="nav__icon-inner">
+														<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M33.7186 3.8442L31.1558 1.28141C29.4473 -0.427101 26.6772 -0.427169 24.9686 1.28141L0.877561 25.3724L0.010284 33.1779C-0.10579 34.2228 0.777277 35.1058 1.82208 34.9897L9.62764 34.1224L33.7187 10.0314C35.4271 8.32283 35.4271 5.55271 33.7186 3.8442ZM11.2578 23.742C11.685 24.1692 12.3775 24.1692 12.8046 23.742L25.1562 11.3905L27.2111 13.4453L11.8945 28.7618V26.3867H8.61325V23.1054H6.2381L21.5547 7.78888L23.6095 9.84369L11.2578 22.1954C10.8306 22.6225 10.8306 23.3149 11.2578 23.742ZM8.6233 32.033L4.59044 32.4811L2.5188 30.4095L2.9669 26.3766L4.32404 25.0195H6.69919V28.3007H9.98044V30.6759L8.6233 32.033ZM32.1718 8.48457L28.7578 11.8985L23.1014 6.24211L26.5154 2.82817C27.3702 1.97334 28.754 1.9732 29.609 2.82817L32.1718 5.39097C33.0267 6.24587 33.0267 7.62953 32.1718 8.48457Z" fill="white" fill-opacity="0.35"/>
+														</svg>
+													</span>
+												</span>
+
+												<p class="hidden-xs">Blog</p>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<span class="nav__icon">
+													<span class="nav__icon-inner">
+														<svg width="39" height="35" viewBox="0 0 39 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M19.5 16.2812C18.2948 16.2812 17.1166 16.6386 16.1145 17.3082C15.1124 17.9778 14.3313 18.9295 13.8701 20.043C13.4089 21.1565 13.2882 22.3818 13.5234 23.5638C13.7585 24.7459 14.3389 25.8317 15.1911 26.6839C16.0433 27.5362 17.1291 28.1165 18.3112 28.3517C19.4933 28.5868 20.7185 28.4661 21.832 28.0049C22.9455 27.5437 23.8972 26.7626 24.5668 25.7605C25.2364 24.7584 25.5938 23.5802 25.5938 22.375C25.5938 20.7588 24.9517 19.2089 23.8089 18.0661C22.6661 16.9233 21.1162 16.2812 19.5 16.2812ZM19.5 26.0312C18.7769 26.0312 18.07 25.8168 17.4687 25.4151C16.8674 25.0133 16.3988 24.4423 16.1221 23.7742C15.8453 23.1061 15.7729 22.3709 15.914 21.6617C16.0551 20.9525 16.4033 20.301 16.9147 19.7896C17.426 19.2783 18.0775 18.9301 18.7867 18.789C19.496 18.6479 20.2311 18.7203 20.8992 18.9971C21.5673 19.2738 22.1383 19.7424 22.5401 20.3437C22.9418 20.945 23.1563 21.6519 23.1563 22.375C23.1553 23.3444 22.7697 24.2738 22.0843 24.9592C21.3988 25.6447 20.4694 26.0302 19.5 26.0312ZM28.2164 12.644C27.79 11.8978 27.1739 11.2775 26.4305 10.8461C25.6872 10.4147 24.843 10.1875 23.9835 10.1875H15.0165C14.1571 10.1875 13.3129 10.4147 12.5695 10.8461C11.8261 11.2775 11.21 11.8978 10.7837 12.644L2.7582 26.6879C2.54786 27.0563 2.43732 27.4732 2.43751 27.8975V32.125C2.43751 32.7715 2.69432 33.3915 3.15144 33.8486C3.60856 34.3057 4.22855 34.5625 4.87501 34.5625H34.125C34.7715 34.5625 35.3915 34.3057 35.8486 33.8486C36.3057 33.3915 36.5625 32.7715 36.5625 32.125V27.8975C36.5627 27.4732 36.4522 27.0563 36.2418 26.6879L28.2164 12.644ZM34.125 32.125H4.87501V27.8975L12.9005 13.8529C13.1141 13.4803 13.4222 13.1705 13.7937 12.955C14.1652 12.7394 14.587 12.6256 15.0165 12.625H23.9835C24.413 12.6256 24.8348 12.7394 25.2063 12.955C25.5778 13.1705 25.8859 13.4803 26.0995 13.8529L34.125 27.8975V32.125ZM38.1065 7.00352C32.8849 2.81482 26.2648 0.4375 19.5 0.4375C12.7352 0.4375 6.11509 2.81482 0.893508 7.00352C0.611641 7.23542 0.385142 7.52736 0.230556 7.85801C0.0759708 8.18866 -0.00279571 8.54967 1.14451e-05 8.91467V13.8438C1.14451e-05 14.167 0.128415 14.477 0.356975 14.7055C0.585535 14.9341 0.895529 15.0625 1.21876 15.0625H6.55917C6.78554 15.0624 7.00742 14.9994 7.19995 14.8803C7.39247 14.7612 7.54803 14.5909 7.64919 14.3884L9.75001 9.57812C12.7893 8.26188 16.0898 7.75 19.5 7.75C22.9102 7.75 26.2092 8.26188 29.25 9.57812L31.3508 14.3884C31.452 14.5909 31.6076 14.7612 31.8001 14.8803C31.9926 14.9994 32.2145 15.0624 32.4409 15.0625H37.7813C38.1045 15.0625 38.4145 14.9341 38.6431 14.7055C38.8716 14.477 39 14.167 39 13.8438V8.91467C39.0028 8.54967 38.9241 8.18866 38.7695 7.85801C38.6149 7.52736 38.3884 7.23542 38.1065 7.00352ZM36.5625 12.625H33.2407L31.4834 8.60236L31.1025 7.72258L30.2212 7.34172C27.0662 5.97596 23.56 5.3125 19.5 5.3125C15.4401 5.3125 11.9346 5.97596 8.78187 7.34096L7.90056 7.72182L7.5197 8.6016L5.75937 12.625H2.43294L2.41923 8.90477C7.26456 5.01649 13.2875 2.89031 19.5 2.875C25.7094 2.88628 31.7288 5.017 36.5625 8.91467V12.625Z" fill="white" fill-opacity="0.35"/>
+														</svg>
+													</span>
+												</span>
+
+												<p class="hidden-xs">Contact</p>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<span class="nav__icon">
+													<span class="nav__icon-inner">
+														<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M36.3001 34.3798L27.0913 25.171C26.9271 25.0068 26.7129 24.9211 26.4845 24.9211H25.7492C28.1978 22.2727 29.6969 18.739 29.6969 14.8484C29.6969 6.6461 23.0508 0 14.8484 0C6.6461 0 0 6.6461 0 14.8484C0 23.0508 6.6461 29.6969 14.8484 29.6969C18.739 29.6969 22.2727 28.1978 24.9211 25.7563V26.4845C24.9211 26.7129 25.0139 26.9271 25.171 27.0913L34.3798 36.3001C34.7154 36.6357 35.2579 36.6357 35.5934 36.3001L36.3001 35.5934C36.6357 35.2579 36.6357 34.7154 36.3001 34.3798ZM14.8484 27.4125C7.90251 27.4125 2.28437 21.7944 2.28437 14.8484C2.28437 7.90251 7.90251 2.28437 14.8484 2.28437C21.7944 2.28437 27.4125 7.90251 27.4125 14.8484C27.4125 21.7944 21.7944 27.4125 14.8484 27.4125Z" fill="white" fill-opacity="0.35"/>
+														</svg>
+													</span>
+												</span>
+
+												<p class="hidden-xs">Search</p>
+											</a>
+										</li>
+									</ul>
+								</nav><!-- /.nav -->
+							</div><!-- /.bar__inner -->
+						</div><!-- /.bar -->
+					</div><!-- /.section__aside -->
+
+					<div class="section__content">
+						<div class="section__head js-animation-container">
+							<h2 class="animation-spread js-split-new-line js-animation-spread js-init-animation">You deserve the truth about your business and marketing.</h2>
+
+							<h2 class="animation-spread js-split-new-line js-animation-spread js-init-animation">We have the balls to tell you.</h2>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="item">
+								<div class="item__image">
+									<img src="assets/images/temp/image-6@2x.png" alt="" width="670" height="420">
+								</div><!-- /.item__image -->
+
+								<div class="item__content">
+									<h2 class="item__title">About us</h2><!-- /.item__title -->
+
+									<p>We call ourselves strategy symphony conductors, marketing de-spaghettification experts, and problem-solving superheroes. We are ushering in a new wave of agency relationships while relying upon the oak solid foundations that made marketing amazing in the first place.</p>
+								</div><!-- /.item__content -->
+							</div><!-- /.item -->
+
+							<div class="accordion">
+								<h2 class="accordion__title">Our Services</h2><!-- /.accordion__title -->
+
+								<div class="accordion__section is-active">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>Marketing & Growth Strategy</h4>
+
+										<p>Do you know how parents always say, "I wish there was a manual on parenting?"</p>
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__image">
+											<img src="assets/images/temp/image-7@2x.png" alt="" width="343" height="352">
+										</div><!-- /.accordion__image -->
+
+										<div class="accordion__content">
+											<h6>Your brand is your foundation and a weak foundation makes for a shaky house.</h6>
+
+											<p>Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.</p>
+										</div><!-- /.accordion__content -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion -->
+						</div><!-- /.section_body -->
+					</div><!-- /.section__content -->
+				</div><!-- /.section__outer -->
+			</div><!-- /.shell -->
+		</section><!-- /.section-about -->
+
+		<div class="components">
+			<div class="shell">
+				<div class="components__row">
+					<div class="dropdown">
+						<a href="#">Color</a>
+
+						<ul>
+							<li>
+								<a href="#">Red</a>
+							</li>
+
+							<li>
+								<a href="#">Blue</a>
+							</li>
+
+							<li>
+								<a href="#">Green</a>
+							</li>
+						</ul>
+					</div><!-- /.dropdow -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="switch">
+						<div class="checkbox">
+							<input id="checkbox" type="checkbox">
+
+							<label for="checkbox"></label>
+						</div><!-- /.checkbox -->
+					</div><!-- /.switch -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="radio">
+						<input id="radio" type="radio" name="radio">
+
+						<label for="radio"></label>
+					</div><!-- /.radio -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="form__controls">
+						<textarea class="field field--textarea"></textarea>
+					</div><!-- /.form__controls -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="form__controls">
+						<textarea class="field field--textarea field--textarea--small"></textarea>
+					</div><!-- /.form__controls -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="panel">
+						<div class="panel__head">
+							<h5 class="panel__title">Confirm transaction</h5><!-- /.panel__title -->
+						</div><!-- /.panel__head -->
+
+						<div class="panel__body">
+							<div class="panel__actions">
+								<button type="button" class="btn-round">You Pressed Me</button>
+							</div><!-- /.panel__actions -->
+						</div><!-- /.panel__body -->
+					</div><!-- /.panel -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="box">
+						<div class="box__actions">
+							<button type="button" class="btn-small">
+								<img src="assets/images/svg/arrow-big.svg" alt="">
+							</button>
+						</div><!-- /.box__actions -->
+					</div><!-- /.box -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="form__controls">
+						<input type="text" class="field" placeholder="John Rupple">
+					</div><!-- /.form__controls -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<a href="#" class="tag">
+						project
+					</a>
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="box-different">
+						<div class="box__head">
+							<h5 class="box__title">Peak Demand</h5><!-- /.box__title -->
+						</div><!-- /.box__head -->
+
+						<div class="box__counter">
+							<p>88</p>
+						</div><!-- /.box__counter -->
+
+						<div class="box__body">
+							<div class="box__bars">
+								<div class="box__bar">
+									<span style="height: 60px">
+										<span></span>
+									</span>
+
+									<p>m</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar">
+									<span style="height: 80px">
+										<span></span>
+									</span>
+
+									<p>t</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar">
+									<span style="height: 100px">
+										<span></span>
+									</span>
+
+									<p>w</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar active">
+									<span style="height: 140px">
+										<span style="height: 100%"></span>
+									</span>
+
+									<p>t</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar">
+									<span style="height: 130px">
+										<span></span>
+									</span>
+
+									<p>f</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar active">
+									<span style="height: 110px">
+										<span style="height: 60%"></span>
+									</span>
+
+									<p>s</p>
+								</div><!-- /.box__bar -->
+
+								<div class="box__bar">
+									<span style="height: 90px">
+										<span></span>
+									</span>
+
+									<p>s</p>
+								</div><!-- /.box__bar -->
+							</div><!-- /.box__bars -->
+						</div><!-- /.box__body -->
+					</div><!-- /.box-different -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="range-slider js-range-slider"></div>
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="block">
+						<div class="block__head">
+							<p>Period:</p>
+						</div><!-- /.block__head -->
+
+						<div class="block__body">
+							<p>Last 30 days</p>
+						</div><!-- /.block__body -->
+
+						<div class="block__actions">
+							<a href="#" class="btn-small btn-small--alt">
+								<img src="assets/images/svg/arrow-grey.svg" alt="">
+							</a>
+						</div><!-- /.block__actions -->
+					</div><!-- /.block -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="radio-group">
+						<div class="radio-alt">
+							<input id="radio-1" type="radio" name="radio-1">
+
+							<label for="radio-1">
+								account
+							</label>
+						</div><!-- /.radio-alt -->
+
+						<div class="radio-alt">
+							<input id="radio-2" type="radio" name="radio-1" checked>
+
+							<label for="radio-2">
+								client
+							</label>
+						</div><!-- /.radio-alt -->
+					</div><!-- /.radio-group -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="radio-group">
+						<div class="radio-alt">
+							<input id="radio-3" type="radio" name="radio-2" checked>
+
+							<label for="radio-3">
+								account
+							</label>
+						</div><!-- /.radio-alt -->
+
+						<div class="radio-alt">
+							<input id="radio-4" type="radio" name="radio-2">
+
+							<label for="radio-4">
+								client
+							</label>
+						</div><!-- /.radio-alt -->
+					</div><!-- /.radio-group -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="checkbox-alt">
+						<input type="checkbox" id="check-2">
+
+						<label for="check-2"></label>
+					</div><!-- /.checkbox-alt -->
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="range-slider-alt js-range-slider"></div>
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="range-slider-alt range-slider-alt--different js-range-slider"></div>
+				</div><!-- /.components__row -->
+
+				<div class="components__row">
+					<div class="checkbox-different">
+						<input type="checkbox" id="check-3">
+
+						<label for="check-3">
+							<span class="checkbox__container">
+								<span class="checkbox__inner">
+									<span></span>
+
+									<span></span>
+
+									<span></span>
+
+									<span></span>
+								</span>
+							</span>
+						</label>
+					</div><!-- /.checbox-different -->
+				</div><!-- /.components__row -->
+			</div><!-- /.shell -->
+		</div><!-- /.components -->
+
+		<include src="footer.html"></include>
+	</div><!-- /.wrapper -->
+
+	<include src="scripts.html"></include>
+</body>
+</html>

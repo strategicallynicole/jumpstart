@@ -1,0 +1,181 @@
+.alx-darked-wrap {
+  .alx-scroll-wrap {
+    .alx-dark-section {
+      background-color: #515151;
+    }
+
+    * {
+      // color: #fff
+   
+    }
+
+    //heading
+    .alx-heading {
+      color: #fff;
+
+      &__zigzag {
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &__pretitle {
+        color: #f2f2f2;
+
+        i {
+          color: #fff !important;
+        }
+      }
+
+      &__description {
+        color: #f1f1f1;
+      }
+    }
+
+    .alx-vertical-heading {
+      color: #fff;
+
+      i {
+        color: #f1f1f1;
+      }
+    }
+$text: #efefef;
+    //dots style
+    .alx-dots-style {
+      &:before, &:after {
+        background-image: url(../img/dots_light.svg);
+      }
+    }
+
+    //personal mag
+    .alx-person-image {
+      &__title {
+        color: #fff;
+      }
+    }
+
+    // lang switch
+    .alx-lang-change {
+      ul {
+        &:before {
+          color: #f1f1f1;
+        }
+
+        li {
+          a {
+            color: #efefef;
+          }
+        }
+
+        .current-lang {
+          a {
+            color: $text;
+          }
+        }
+      }
+    }
+
+    // Copyright
+    .alx-copyright {
+      * {
+        color: #fff;
+      }
+    }
+
+    //burger
+    .alx-burger {
+      span, span:after, span:before {
+        background-color: #fff;
+      }
+
+      &.on, &__open {
+        span {
+          background-color: transparent;
+        }
+      }
+    }
+
+    //social links
+    .alx-social-links {
+      * {
+        color: #fff;
+      }
+    }
+
+    //header
+    header {
+      .alx-logo {
+        &__dark {
+          display: none;
+        }
+
+        &__white {
+          display: block;
+        }
+      }
+    }
+  }
+
+  //pp nav
+  #pp-nav ul li a {
+    color: #fff;
+    border-color: #fff;
+
+    &:before {
+      background-color: #fff;
+    }
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+
+  //sidebar
+  .alx-aside-sidebar {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+  }
+
+  .alx-portfolio {
+    &__nav {
+      .alx-active {
+        color: #fff;
+
+        &:before {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+$accent: #6c5ba7;
+  //skill
+  .alx-skills-list ul li {
+    color: #fff;
+
+    span {
+      color: tint(#6c5ba7, 90%);
+    }
+  }
+
+  .alx-skills {
+    &__title, &__count {
+      color: #fff;
+    }
+
+    &__bar {
+      background-color: tint($accent, 30%);
+    }
+
+    &__body {
+      background-color: #fff;
+    }
+  }
+
+  //------------- Servives change ------------//
+  .alx-services {
+    &__item {
+      &__wrap {
+        box-shadow: 0 0 8px rgba(#fff, 0.5);
+      }
+    }
+  }
+}

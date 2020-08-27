@@ -1,0 +1,59 @@
+@mixin border-box {
+  //  border: 1px solid #ffffff;
+ //   box-sizing: border-box;
+ //   -moz-box-sizing: border-box;
+//    -webkit-box-sizing: border-box;
+}
+@mixin border-box-alt {
+    border: 1px solid $purple;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@mixin bg-grad {
+    background: -webkit-linear-gradient($bg-gradient) !important;
+    background: -moz-linear-gradient($bg-gradient) !important;
+    background: -ms-linear-gradient($bg-gradient) !important;
+    background: -o-linear-gradient($bg-gradient) !important;
+    background: linear-gradient($bg-gradient) !important;
+  }
+
+
+  @mixin hovers {
+    &:hover {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+     }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+
+
+
+@mixin transition {
+    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+
+
+
+  @mixin bg-size-cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  @mixin neu-dark-bg {
+    @include bg-grad;
+    @include bg-size-cover;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: $light-text-on-dark-bg;
+    font-family: 'Raleway';
+    font-weight: 100;
+  }

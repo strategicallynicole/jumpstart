@@ -1,0 +1,43 @@
+
+
+{% macro card(post) %}
+  <div class="neucardcontainer mb-50 mt-10">
+        <header class="post-card-header">
+            {% if post.feature_image %}
+             <figure class="neucardimage" style="background-image: url({{ post.feature_image }});">
+				<a href="{{ post.url }}">	<img class="neucardimage" src="{{ post.feature_image }}" alt="{{ title }}"></a>
+			</figure>
+            {% endif %}
+
+            	<div class="neuradius">
+
+									<div class="fancy-box-header">
+										<h2>{{ title }}</h2>
+
+						<span class="fancy-box-time-container"><i class="fad fa-clock"></i>   {{ post.html | safe | getReadingTime }} min read
+                        </span>
+<span class="fancy-box-tags-container">
+
+                {% if post.tags %}<div class="fancy-box-tags"><i class="fad fa-tags"></i>{% for tag in post.tags.slice(0,1) %}<a href="{{ tag.url }}">{{ tag.name }}</a> {% endfor %}</div>{% endif %}
+</span><div class="fancybody">
+										<h3><a class="text-white titlefancycard" href="{{ post.url }}">{{ title }}</a></h3>
+									</div><!-- /.fancy-box-header -->
+									</div>
+									<div class="fancy-box-info">
+										
+										<p class="fancypostexcerpt"><a href="{{ post.url }}" class="text-white">    {{ post.excerpt }}</a></p>
+										
+										<div class="fancy-box-footer text-center pb-30"><div class="neubutton"><a href="{{ post.url }}">
+													&nbsp; Read on <i class="fas fa-arrow-circle-right"></i>
+											</a></div>
+										
+										</div><!-- /.fancy-box-footer -->
+										
+									</div><!-- /.fancy-box-info -->
+									
+								</div><!-- /.fancy-box-contents -->
+								
+							</div><!-- /.fancy-box fancy-box-travel -->
+
+
+{% endmacro %}

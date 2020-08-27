@@ -1,0 +1,74 @@
+.alx-icon {
+  display: flex;
+  margin-bottom: 40px;
+
+  &__icon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    height: min-content;
+
+    span {
+      // cursor: pointer
+      background-image: linear-gradient(-180deg, #494949 0%, #303030 100%);
+      border-radius: 50%;
+      text-align: center;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      color: $accent;
+
+      i {
+        color: #fff;
+        font-size: 17px;
+      }
+
+      // &:before, &:after
+      // 	content: ""
+      // 	width: 15px
+      // 	height: 15px
+      // 	position: absolute
+      // 	background-color: #ccc
+      // 	border-radius: 50%
+      // 	z-index: -1
+      // &:before
+      // 	left: -10px
+      // 	transform: translate(7px, -17px)
+      // &:after
+      // 	right: -10px
+      // 	transform: translate(-7px, 17px)
+   
+    }
+
+    &:hover {
+      &:before {
+        animation: rotate-360 5s linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    margin: 0;
+  }
+
+  a {
+    color: $accent;
+  }
+}

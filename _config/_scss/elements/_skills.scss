@@ -1,0 +1,60 @@
+.alx-skills {
+  margin: 40px 0;
+  position: relative;
+
+  // overflow: hidden
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__title, &__count {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $text;
+    line-height: 20px;
+  }
+
+  &__count {
+    font-weight: 600;
+  }
+
+  &__body {
+    background-color: #d0d0d0;
+    height: 5px;
+    position: relative;
+    border-radius: 4px;
+
+    // overflow: hidden
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &__bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    width: 0;
+    background-color: $accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all ease 2s;
+    transition-delay: 1s;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      right: 0;
+      background-color: $accent;
+      z-index: 2;
+      box-shadow: 0 2px 4px rgba(#000, 0.5);
+    }
+  }
+}

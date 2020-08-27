@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------ *\
+	Range Slider Alt
+\* ------------------------------------------------------------ */
+
+.range-slider-alt {
+	height: 16px;
+	overflow: visible !important;
+	border: 0 !important;
+	border-radius: 48px;
+	background: linear-gradient(178.63deg, #26272B 9.53%, #34393F 95.92%);
+	box-shadow: inset 2px 2px 6px #0D0E0F, inset -2px -2px 3px #40464E;
+
+	.ui-state-default {
+		top: 3px;
+		left: 0;
+		height: 11px;
+		width: 70px;
+		margin-left: 2px;
+		border: 0;
+		border-radius: 40px;
+		background: linear-gradient(178.63deg, #26272B 9.53%, #34393F 95.92%);
+		cursor: pointer;
+	}
+
+	.ui-widget-header {
+		top: 2px;
+		background: linear-gradient(178.17deg, #2E1A47 12.58%, #6C5BA7 89.78%);
+		box-sizing: border-box;
+		border-radius: 40px;
+		box-shadow: 4px 3px 19px #0D0F0F, -5px -5px 20px #404E4B, inset 1px 1px 2px #6C5BA7;
+	}
+}
+
+.range-slider-alt--different {
+	.ui-state-default {
+		background: linear-gradient(191.17deg, #2E1A47 12.58%, #6C5BA7 89.78%);
+	}
+}

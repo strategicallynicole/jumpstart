@@ -1,0 +1,32 @@
+.neucardcontainer.mb-50.mt-10
+  figure.neucardimage(style='background-image: url({{feature_image}});')
+    a(href='{{url}}')
+      img.neucardimage(src='{{feature_image}}' alt='Content Box')
+  div
+    | {{{svgContents &apos;path/to/file.svg&apos; &quot;add-class&quot; &quot;#byId&quot; }}}
+    .fancy-box-header
+      span.fancy-box-time-container
+        i.fad.fa-clock
+        | {{reading_time}}
+      span.fancy-box-tags-container
+        i.fad.fa-tags
+        |                                         &#x9;{{#foreach tags limit=&quot;1&quot;}}
+        a.fancy-box-tags(href='{{url}}') {{name}}
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{{/foreach}}
+      .fancybody
+        h3
+          a.text-white.titlefancycard(href='{{url}}') {{title}}
+      // /.fancy-box-header
+    .fancy-box-info
+      p.fancypostexcerpt
+        a.text-white(href='{{url}}') {{excerpt words=&quot;25&quot;}}
+      .fancy-box-footer.text-center.pb-30
+        a.btn.white.text-hover-primary.smallerbtn(href='{{url}}')
+          span
+            span.btn-txt.purple
+              | Read on 
+              i.fas.fa-arrow-circle-right
+
+
+
+              

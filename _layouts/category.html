@@ -1,0 +1,19 @@
+---
+title: Category Page
+layout: default.njk
+---
+
+{% include category_header.html %}
+<div class="blog-area section-spacing  bg-color1">
+<div class="blog-wrapper">
+    <div class="container">
+        <div class="row">
+            {% for posts in page.posts limit:'40' %}
+            <div class="col-md-6 col-lg-4">
+                {% include blog_posts.html %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>

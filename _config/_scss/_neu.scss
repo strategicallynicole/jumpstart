@@ -1,0 +1,451 @@
+$bg-gradient: 333.76deg, #26272B 22.72%, #34393F 89.31%;
+$light-text-on-dark-bg: #fff;
+$purple: #6c5ba7;
+$chosenone: $purple;
+$bold: 300;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Josefin+Sans:wght@300&display=swap');
+$darkchosenone: darken(#6c5ba7, 10%);
+.iconbox:hover, .iconbox:focus {
+    box-shadow: none !important;
+}
+
+.fancy-box-travel .fancy-box-time {
+
+  font-weight: 300;
+}
+
+.bordered-text {
+    padding-left: 30px;
+    border-radius: 50em;
+    padding-right: 60px;
+
+    .white {
+      border: 1px solid #ffffff;
+    }
+    .purple {
+      border: 1px solid $purple;
+
+    }
+}
+@mixin bg-grad {
+    background: -webkit-linear-gradient($bg-gradient) !important;
+    background: -moz-linear-gradient($bg-gradient) !important;
+    background: -ms-linear-gradient($bg-gradient) !important;
+    background: -o-linear-gradient($bg-gradient) !important;
+    background: linear-gradient($bg-gradient) !important;
+  }
+  
+  @mixin transition {
+    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+ 
+
+  
+  @mixin bg-size-cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  @mixin neu-dark-bg {
+    @include bg-grad;
+    @include bg-size-cover;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: $light-text-on-dark-bg;
+    font-family: 'Raleway';
+    font-weight: 100;
+  }
+  
+  
+  .bg-dark, .bg-dark-too {
+    @include neu-dark-bg;
+  }
+::selection {
+    color: $chosenone;
+    background: #212121;
+    }
+  body {
+    min-height: 100%;
+    @include bg-grad;
+    @include bg-size-cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $light-text-on-dark-bg;
+    font-family: 'Raleway';
+    font-weight: 100;
+    }
+    strong { 
+        font-weight: 300;
+        
+    }
+    
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab';
+    }
+  .greedy-nav {
+    background-color: transparent;
+  }
+  
+  .mb-120 {
+      margin-bottom: 120px;
+      }
+  .gimme-some-20 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .gimme-some-20h {
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  
+  
+  .neu-dark-bg {
+      min-height: 100%;
+      @include bg-grad;
+      @include bg-size-cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: $light-text-on-dark-bg;
+      font-family: 'Raleway';
+      font-weight: 100;
+  }
+  
+.neubutton, .btn {
+      background: linear-gradient(165.64deg, #26272B 9.53%, #34393F 95.92%);
+      box-shadow: 10px 10px 40px #0D0E0F, -10px -10px 40px #40464E;
+      border-radius: 40px;
+      width:   fit-content;
+      color: #fff !important;
+      margin: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px; 
+      @include transition;
+  }
+  
+.neubutton::after, .btn::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: linear-gradient(165.64deg, #26272B 9.53%, #34393F 95.92%);
+    box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+    border-radius: 40px;
+    opacity: 0;
+    @include transition;
+  }
+  .btn:hover, .btn:focus, .btn:active, .neubutton:hover, button:focus, .neubutton:focus {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  
+.btn:hover::after, .btn:active::after, .btn:focus::after, .neubutton:hover::after, .neubutton:active::after, .neubutton:focus::after  {
+    opacity: 1;
+   
+  }
+  .neubutton.alt::after {
+    content: "";
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+    opacity: 0;
+    @include transition;
+    background: linear-gradient(130.46deg, #2E1A47 12.58%, $chosenone 89.78%);
+  }
+  
+  
+  
+  .neuicon i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  .text-chosen {
+    color: $chosenone;
+    font-weight: $bold;
+  }
+  
+  
+  
+  .neuicon-holder-small {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .neuicon-holder-medium {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .neuicon-holder-large {
+    width: 75px;
+    height: 75px;
+  }
+  
+    .neuicon {
+      text-align: center;
+      opacity: 1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      border-radius: 20px;
+      box-shadow: 1px 1px 5px #0D0E0F, -3px -3px 9px #353B42, inset 1px 1px 9px #2D2E35;
+      background: linear-gradient(128.11deg, #26272B 6.67%, #34393F 97.78%);
+  
+      @include transition;
+    }
+  
+  
+    .neuicon::after {
+      content: "";
+      border-radius: 20px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+      opacity: 0;
+      background: linear-gradient(137.63deg, #26272B 9.53%, #34393F 95.92%);
+      @include transition;
+    }
+    .neuicon.alt::after {
+      content: "";
+      border-radius: 20px;
+  
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+      opacity: 0;
+      @include transition;
+      background: linear-gradient(130.46deg, #2E1A47 12.58%, $chosenone 89.78%);
+    }
+  
+    .neuicon.altalt::after {
+      content: "";
+      border-radius: 20px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      @include transition;
+      background: linear-gradient(130.46deg, $darkchosenone 12.58%, $chosenone 89.78%);
+      box-shadow: 4px 3px 19px #0D0F0F, -5px -5px 20px #404E4A, inset 1px 1px 7px $chosenone;
+  
+    }
+    .neuicon:hover::after {
+      opacity: 1;
+  }
+    .neuicon:hover {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  
+    .neuicon:hover::after {
+        opacity: 1;
+    }
+  
+  
+  
+  
+    .neubutton {
+      text-align: center;
+      opacity: 1;
+      position: relative;
+      box-shadow: 1px 1px 5px #0D0E0F, -3px -3px 9px #353B42, inset 1px 1px 9px #2D2E35;
+      background: linear-gradient(128.11deg, #26272B 6.67%, #34393F 97.78%);
+        border-radius: 40px;
+      width:   fit-content;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px; 
+      display: inline-block;
+      @include transition;
+    }
+  
+  
+    .neubutton::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: linear-gradient(165.64deg, #26272B 9.53%, #34393F 95.92%);
+      box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+      border-radius: 40px;
+      @include transition;
+    }
+    .neubutton.alt::after {
+      content: "";
+      border-radius: 40px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      opacity: 0;
+      @include transition;
+  box-sizing: border-box;
+  box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+  
+  background: linear-gradient(130.46deg, #2E1A47 12.58%, $chosenone 89.78%);
+    }
+  
+    textarea, input {
+      font-weight: 100;
+      border: 0;
+      border-radius: 40px;
+      width: 100%;
+      color: #fff;
+      padding: 15px;
+      background: linear-gradient(149.55deg, #26272B 9.53%, #34393F 95.92%);
+  box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+    }
+    .neubutton:hover::after {
+      opacity: 1;
+  }
+    .neubutton:hover {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  
+    .neubutton:hover::after {
+        opacity: 1;
+    }
+  
+  
+  
+  
+  
+  .neumorphic {
+      margin: 20px;
+      position: relative;
+      display: inline-block;
+      padding:   25px;
+      width: 100%;
+      height: 100%;
+      border-radius: 40px;
+      box-shadow: 1px 1px 5px #0D0E0F, -3px -3px 9px #353B42, inset 1px 1px 9px #2D2E35;
+      background: linear-gradient(128.11deg, #26272B 6.67%, #34393F 97.78%);
+            @include transition;
+    }
+    .fancy-box-image:hover {
+        backdrop-filter: grayscale(0.5) opacity(0.8) /* ...and on and on... */;
+
+    }
+   
+
+  
+    .neumorphic::after {
+      content: "";
+      border-radius: 40px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: linear-gradient(165.64deg, #26272B 9.53%, #34393F 95.92%);
+      box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+            @include transition;
+    }
+  
+    .neumorphic:hover {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  
+    .neumorphic:hover::after {
+        opacity: 1;
+    }
+
+.neuradius {
+    border-radius: 40px !important;
+}
+
+
+    .neustyle {
+        border-radius: 40px !important;
+        box-shadow: 1px 1px 5px #0D0E0F, -3px -3px 9px #353B42, inset 1px 1px 9px #2D2E35;
+        background: linear-gradient(128.11deg, #26272B 6.67%, #34393F 97.78%);
+                @include transition;
+      }
+    
+      .neustyle::after {
+        content: "";
+        border-radius: 40px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(165.64deg, #26272B 9.53%, #34393F 95.92%);
+        box-shadow: inset 3px 3px 10px #0D0E0F, inset -3px -3px 10px #40464E;
+        opacity: 0;
+        @include transition;
+      }
+    
+      .neustyle:hover {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+      }
+    
+      .neustyle:hover::after {
+          opacity: 1;
+      }
+  
+  
+  
+  
+  
+  .accordion-title-bordered .accordion-title a {
+      color: #ffffff;
+  }
+  
+  .accordion-title-bordered .accordion-title .active a {
+      color: #6c5ba7;
+  }
+.superlg {
+  font-size: 3rem;
+}
+.verylg {
+  font-size: 2rem;
+}
